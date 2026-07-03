@@ -4,7 +4,7 @@ A modern, production-ready personal portfolio showcasing my work in **Artificial
 
 Built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**, the portfolio highlights my projects, technical skills, research experience, achievements, and professional journey through an interactive and responsive interface.
 
-🔗 **Live Website:** https://riya.echotechai.in
+🔗 **Live Website:** [https://https://echotechai.in/](https://echotechai.in/)
 
 ---
 
