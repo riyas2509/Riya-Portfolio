@@ -14,10 +14,6 @@ The portfolio showcases my projects, technical skills, research, experience, ach
 - EmailJS
 - Firebase Hosting
 
-## Live Website
-
-https://riya.echotechai.in
-
 ## Connect with Me
 
 - LinkedIn: https://www.linkedin.com/in/riya-shah-335056290/
