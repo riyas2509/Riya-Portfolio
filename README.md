@@ -1,4 +1,4 @@
-# Riya Shah - Personal Portfolio
+# Riya Shah's Personal Portfolio
 
 This repository contains the source code for my personal portfolio website.
 
