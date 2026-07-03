@@ -1,4 +1,4 @@
-# 🌐 Riya Shah — Personal Portfolio
+# 🌐 Riya Shah's Personal Portfolio
 
 A modern, production-ready personal portfolio showcasing my work in **Artificial Intelligence, Machine Learning, Software Engineering, Product Development, and Industry Research**.
 
