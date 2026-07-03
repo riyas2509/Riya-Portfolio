@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-card: #FFFFFF;
+  
+  --brand-blue: #4285F4;
+  --brand-green: #34A853;
+  --brand-yellow: #FBBC05;
+  --brand-red: #EA4335;
+  
+  --text-primary: #111827;
+  --text-secondary: #6B7280;
+
+  --border-color: #E2E8F0;
+  --border-subtle: #F1F5F9;
+}
+
+.dark {
+  --bg-primary: #0B0F19;
+  --bg-secondary: #121829;
+  --bg-card: #1E2640;
+  
+  --brand-blue: #60A5FA;
+  --brand-green: #4ADE80;
+  --brand-yellow: #FBBF24;
+  --brand-red: #F87171;
+  
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+
+  --border-color: #313D5E;
+  --border-subtle: #161E33;
+}
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Premium Tech Theme Colors */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-card: var(--bg-card);
+  
+  --color-brand-blue: var(--brand-blue);
+  --color-brand-green: var(--brand-green);
+  --color-brand-yellow: var(--brand-yellow);
+  --color-brand-red: var(--brand-red);
+  
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-accent-lime: var(--brand-blue);
+
+  /* Dynamically mapped utility overrides for automatic transition */
+  --color-slate-200: var(--border-color);
+  --color-slate-100: var(--border-subtle);
+  --color-slate-50: var(--bg-secondary);
+}
+
+/* Custom scrollbar and ambient styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(66, 133, 244, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(66, 133, 244, 0.35);
+}
+
+body {
+  @apply antialiased text-text-primary bg-bg-primary transition-colors duration-300 selection:bg-brand-blue/10 selection:text-text-primary;
+}
+
+/* Hide print resume on normal screen view */
+.print-only-resume {
+  display: none;
+}
+
+@media print {
+  body, html {
+    background: #FFFFFF !important;
+    color: #111827 !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+  
+  /* Hide interactive screen elements entirely */
+  header, 
+  footer, 
+  nav, 
+  button, 
+  form, 
+  .no-print, 
+  #scroll-progress-bar, 
+  #loader-prompt,
+  #direct-contact-grid,
+  .sticky,
+  aside {
+    display: none !important;
+  }
+
+  /* Force display of the printable resume block */
+  .print-only-resume {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Perfect portrait output page setups */
+  @page {
+    size: portrait;
+    margin: 1.2cm 1.2cm;
+  }
+}
+
