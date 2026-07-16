@@ -12,17 +12,7 @@ import {
 } from 'lucide-react';
 import { PROJECTS } from '../data/projects';
 
-// Import Sandbox Demo modules
-import EchoNoteDemo from '../components/EchoNoteDemo';
-import SudokuDemo from '../components/SudokuDemo';
-import OcrCnnDemo from '../components/OcrCnnDemo';
-import IndustryResearchDemo from '../components/IndustryResearchDemo';
-import DsaVisualizerDemo from '../components/DsaVisualizerDemo';
-import StockPredictorDemo from '../components/StockPredictorDemo';
-
-interface ProjectsViewProps {
-  initialSandboxId?: string;
-}
+interface ProjectsViewProps {}
 
 const CATEGORIES = [
   {
@@ -49,18 +39,9 @@ const CATEGORIES = [
 
 type CategoryName = typeof CATEGORIES[number]['name'];
 
-export default function ProjectsView({ initialSandboxId = 'echonote' }: ProjectsViewProps) {
+export default function ProjectsView({}: ProjectsViewProps) {
   const [filter, setFilter] = useState<'All' | CategoryName>('All');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [activeSandbox, setActiveSandbox] = useState<string>(initialSandboxId);
-  const sandboxRef = useRef<HTMLDivElement>(null);
-
-  // Sync sandbox selection from outside when changed
-  useEffect(() => {
-    if (initialSandboxId) {
-      setActiveSandbox(initialSandboxId);
-    }
-  }, [initialSandboxId]);
 
   const matchesSearch = (p: typeof PROJECTS[number], query: string) => {
     if (!query) return true;
@@ -75,11 +56,6 @@ export default function ProjectsView({ initialSandboxId = 'echonote' }: Projects
       p.keyLearning.toLowerCase().includes(q) ||
       p.techStack.some((tech) => tech.toLowerCase().includes(q))
     );
-  };
-
-  const launchSandbox = (sandboxId: string) => {
-    setActiveSandbox(sandboxId);
-    sandboxRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   const activeCategories = CATEGORIES.filter((cat) => filter === 'All' || cat.name === filter);
@@ -302,24 +278,16 @@ export default function ProjectsView({ initialSandboxId = 'echonote' }: Projects
                           {/* Card Footer Actions */}
                           <div className="pt-4 mt-6 border-t border-slate-100 flex flex-wrap gap-2 justify-between items-center">
                             {/* Primary Target Action Link */}
-                            <a
-                                href={p.primaryCtaUrl}
-                                target={p.primaryCtaUrl.startsWith('#') ? '_self' : '_blank'}
-                                rel="noreferrer"
-                                className="px-4 py-2 bg-text-primary hover:bg-black text-white font-sans text-xs font-semibold uppercase tracking-[0.05em] rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm"
-                            >
-                              {p.primaryCtaLabel}
-                              <ArrowUpRight className="w-3.5 h-3.5" />
-                            </a>
-
-                            {/* Interactive Console Trigger */}
-                            {isInteractive && (
-                              <button
-                                onClick={() => launchSandbox(p.interactiveDemoId!)}
-                                className="px-3.5 py-2 bg-brand-blue hover:bg-brand-blue-hover text-white font-sans text-xs font-semibold uppercase tracking-[0.05em] rounded-xl transition-all flex items-center gap-1.5 shadow-[0_2px_10px_rgba(93,169,255,0.2)] hover:shadow-none cursor-pointer"
+                            {p.primaryCtaUrl && p.primaryCtaUrl !== '#sandbox-container' && (
+                              <a
+                                  href={p.primaryCtaUrl}
+                                  target={p.primaryCtaUrl.startsWith('#') ? '_self' : '_blank'}
+                                  rel="noreferrer"
+                                  className="px-4 py-2 bg-text-primary hover:bg-black text-white font-sans text-xs font-semibold uppercase tracking-[0.05em] rounded-xl transition-all inline-flex items-center gap-1.5 shadow-sm"
                               >
-                                <Terminal className="w-3.5 h-3.5" /> Launch Sandbox
-                              </button>
+                                {p.primaryCtaLabel}
+                                <ArrowUpRight className="w-3.5 h-3.5" />
+                              </a>
                             )}
                           </div>
                         </div>
@@ -330,70 +298,6 @@ export default function ProjectsView({ initialSandboxId = 'echonote' }: Projects
               );
             })
           )}
-        </div>
-      </section>
-
-      {/* 2. DYNAMIC WORKSPACE SANDBOX PLAYPEN */}
-      <section
-        ref={sandboxRef}
-        id="sandbox-container"
-        className="bg-bg-secondary border border-slate-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-md relative overflow-hidden border-t-2 border-t-brand-blue"
-      >
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand-blue/[0.02] rounded-full blur-[100px] pointer-events-none animate-pulse" />
-        
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4 relative z-10">
-          <div className="space-y-1">
-            <div className="flex items-center gap-1.5 text-xs font-secondary text-brand-blue uppercase font-medium tracking-[0.05em]">
-              <Terminal className="w-3.5 h-3.5 text-brand-blue" /> SYSTEM PLAYGROUND &bull; INTEGRATED COMPILER CORES
-            </div>
-            <h2 className="text-[24px] font-sans font-semibold uppercase text-text-primary tracking-tight">
-              Interactive sandbox module
-            </h2>
-          </div>
-
-          {/* Sandbox Toggle Panels */}
-          <div className="flex flex-wrap gap-1 text-xs font-secondary bg-bg-secondary p-1 rounded-xl border border-slate-200 shadow-sm font-medium">
-            {[
-              { label: 'EchoNote AI', id: 'echonote' },
-              { label: 'Sudoku Solver', id: 'sudoku' },
-              { label: 'EMNIST OCR CNN', id: 'ocr-cnn' },
-              { label: 'Strategic Matrix', id: 'research' },
-              { label: 'DSA Pointers', id: 'dsa' },
-              { label: 'Stock ML Pipeline', id: 'stock' }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveSandbox(tab.id)}
-                className={`px-3 py-1.5 rounded-lg font-semibold uppercase tracking-normal transition-all cursor-pointer leading-none ${
-                  activeSandbox === tab.id
-                    ? 'bg-brand-blue text-white font-semibold shadow-md'
-                    : 'text-text-secondary hover:text-text-primary'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Dynamic Frame wrapper */}
-        <div className="border border-slate-200 rounded-2xl relative bg-bg-primary overflow-hidden min-h-[400px] shadow-lg">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={activeSandbox}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-            >
-              {activeSandbox === 'echonote' && <EchoNoteDemo />}
-              {activeSandbox === 'sudoku' && <SudokuDemo />}
-              {activeSandbox === 'ocr-cnn' && <OcrCnnDemo />}
-              {activeSandbox === 'research' && <IndustryResearchDemo />}
-              {activeSandbox === 'dsa' && <DsaVisualizerDemo />}
-              {activeSandbox === 'stock' && <StockPredictorDemo />}
-            </motion.div>
-          </AnimatePresence>
         </div>
       </section>
     </div>

@@ -15,7 +15,6 @@ import {
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/personal';
 import { EDUCATION } from '../data/education';
-import GithubCalendar from '../components/GithubCalendar';
 
 interface AboutViewProps {
   onNavigate: (view: string) => void;
@@ -132,7 +131,6 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
           {/* Avatar frame */}
           <div className="relative mx-auto max-w-[320px] aspect-square rounded-3xl overflow-hidden border border-slate-200 group bg-bg-secondary p-1 bg-gradient-to-tr from-brand-blue via-brand-green to-brand-yellow shadow-sm">
             <div className="rounded-3xl overflow-hidden w-full h-full relative bg-white">
-              <div className="absolute inset-x-0 bottom-0 top-1/2 bg-gradient-to-t from-black/60 to-transparent z-10 opacity-80" />
               <img 
                 src="/images/profile.png" 
                 alt={PERSONAL_INFO.name} 
@@ -153,11 +151,6 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
                   }
                 }}
               />
-              {/* Context overlay tag */}
-              <div className="absolute bottom-4 left-4 z-20 space-y-1">
-                <span className="block font-secondary text-xs text-brand-blue font-medium uppercase tracking-[0.05em]">STUDENT_BUILDER_CELL</span>
-                <h4 className="text-white font-semibold text-sm tracking-tight font-sans uppercase">Riya Shah &mdash; Cohort 2026</h4>
-              </div>
             </div>
           </div>
 
@@ -297,9 +290,6 @@ export default function AboutView({ onNavigate }: AboutViewProps) {
           </div>
         </div>
       </div>
-
-      {/* TECHNICAL GITHUB CONTRIBUTION GRAPH */}
-      <GithubCalendar />
 
       {/* ACADEMIC FOUNDATIONS CARD BLOCK */}
       <div className="bg-bg-secondary border border-slate-200 rounded-2xl p-6 md:p-8 space-y-6 shadow-xs border-t-2 border-t-brand-blue">

@@ -15,10 +15,9 @@ import { PERSONAL_INFO } from '../data/personal';
 
 interface HomeViewProps {
   onNavigate: (page: string) => void;
-  onNavigateToSandbox?: (sandboxId: string) => void;
 }
 
-export default function HomeView({ onNavigate, onNavigateToSandbox }: HomeViewProps) {
+export default function HomeView({ onNavigate }: HomeViewProps) {
   return (
     <div className="space-y-16 py-4">
       {/* 1. HERO ARCHITECTURE SECTION */}
@@ -89,11 +88,11 @@ export default function HomeView({ onNavigate, onNavigateToSandbox }: HomeViewPr
               </div>
               <div className="space-y-2">
                 <span className="block text-[11px] font-secondary text-text-secondary uppercase tracking-[0.05em] leading-tight font-semibold">
-                  Active<br />Sandboxes
+                  Software<br />Projects
                 </span>
                 <div className="flex flex-col">
                   <span className="text-[38px] font-sans font-extrabold text-brand-blue tracking-tight leading-none">6</span>
-                  <span className="text-[15px] font-sans font-semibold text-brand-blue leading-tight mt-1">Projects</span>
+                  <span className="text-[15px] font-sans font-semibold text-brand-blue leading-tight mt-1">Products</span>
                 </div>
               </div>
             </div>
@@ -311,7 +310,7 @@ export default function HomeView({ onNavigate, onNavigateToSandbox }: HomeViewPr
                 <p className="text-[14px] text-text-secondary font-secondary font-medium tracking-[0.05em]">PRIMARY TECH: REACT / C++</p>
               </div>
               <p className="text-[14px] text-text-secondary leading-[22px] font-normal">
-                Console-inspired interactive sandbox mapping logical memory layout and pointers.
+                Console-inspired interactive visualizer mapping logical memory layout and pointers.
               </p>
             </div>
             <button 

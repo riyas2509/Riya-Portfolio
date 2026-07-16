@@ -42,7 +42,6 @@ function ViewLoadingFallback() {
 
 export default function App() {
   const [activeView, setActiveView] = useState<string>('home');
-  const [initialSandboxId, setInitialSandboxId] = useState<string>('echonote');
   const [scrollProgress, setScrollProgress] = useState<number>(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
@@ -137,11 +136,6 @@ export default function App() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const handleNavigateToSandbox = (sandboxId: string) => {
-    setInitialSandboxId(sandboxId);
-    setActiveView('projects');
-  };
 
   const navLinks = [
     { label: 'Home', id: 'home' },
@@ -297,7 +291,6 @@ export default function App() {
               {activeView === 'home' && (
                 <HomeView 
                   onNavigate={setActiveView} 
-                  onNavigateToSandbox={handleNavigateToSandbox} 
                 />
               )}
               {activeView === 'about' && (
@@ -310,9 +303,7 @@ export default function App() {
                 />
               )}
               {activeView === 'projects' && (
-                <ProjectsView 
-                  initialSandboxId={initialSandboxId} 
-                />
+                <ProjectsView />
               )}
               {activeView === 'research' && <ResearchView onNavigate={setActiveView} />}
               {activeView === 'achievements' && <AchievementsView onNavigate={setActiveView} />}
