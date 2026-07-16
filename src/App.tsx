@@ -171,29 +171,29 @@ export default function App() {
           id="scroll-progress-bar"
         />
         
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <div className="max-w-[1536px] xl:max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 flex justify-between items-center">
           {/* Brand Mark */}
           <button 
             onClick={() => setActiveView('home')} 
             className="flex flex-col text-left group cursor-pointer focus:outline-none"
           >
-            <span className="text-[9px] uppercase tracking-[0.35em] text-text-secondary font-bold group-hover:text-brand-blue transition-colors">
+            <span className="font-secondary text-[9px] uppercase tracking-[0.35em] text-text-secondary font-medium group-hover:text-brand-blue transition-colors">
               AI &amp; ML STUDENT // RIYA SHAH
             </span>
-            <span className="font-sans font-black text-xl tracking-tight uppercase text-text-primary group-hover:text-brand-blue transition-colors leading-none mt-1">
+            <span className="font-sans font-extrabold text-xl tracking-tight uppercase text-text-primary group-hover:text-brand-blue transition-colors leading-none mt-1">
               Riya Shah.
             </span>
           </button>
           
           {/* Desktop Navigation (Unified 7 Pages as requested) */}
-          <nav className="hidden xl:flex items-center gap-7 text-[10px] uppercase font-mono tracking-wider">
+          <nav className="hidden lg:flex items-center gap-4 xl:gap-7 text-[14px] xl:text-[15px] font-medium tracking-normal">
             {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => setActiveView(link.id)}
-                className={`transition-all hover:text-brand-blue relative py-1.5 cursor-pointer leading-none font-bold ${
+                className={`transition-all hover:text-brand-blue relative py-1.5 cursor-pointer leading-none ${
                   activeView === link.id 
-                    ? 'text-brand-blue font-black' 
+                    ? 'text-brand-blue font-semibold' 
                     : 'text-text-secondary'
                 }`}
               >
@@ -212,7 +212,7 @@ export default function App() {
           <div className="flex items-center gap-4">
             <button
               onClick={() => setActiveView('contact')}
-              className="px-4 py-2 border border-slate-200 hover:border-brand-blue rounded-full text-[9px] uppercase tracking-wider font-bold text-text-primary hover:text-brand-blue transition-all duration-200 cursor-pointer bg-bg-secondary hover:bg-brand-blue/5"
+              className="px-4 py-2 border border-slate-200 hover:border-brand-blue rounded-full text-[14px] font-medium tracking-normal text-text-primary hover:text-brand-blue transition-all duration-200 cursor-pointer bg-bg-secondary hover:bg-brand-blue/5 font-sans"
             >
               Let's Connect
             </button>
@@ -220,7 +220,7 @@ export default function App() {
             {/* Mobile menu trigger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="xl:hidden p-2 text-text-secondary hover:text-text-primary rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-200"
+              className="lg:hidden p-2 text-text-secondary hover:text-text-primary rounded-lg focus:outline-none focus:ring-1 focus:ring-slate-200"
               aria-label="Toggle navigation drawer"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -239,14 +239,14 @@ export default function App() {
             className="fixed inset-x-0 top-[69px] bottom-0 z-40 bg-bg-primary border-t border-slate-200 p-6 flex flex-col space-y-6 overflow-y-auto shadow-2xl"
           >
             <div className="flex flex-col space-y-3">
-              <span className="font-mono text-[8px] text-text-secondary uppercase tracking-widest">SYSTEM NAVIGATION CHANNELS</span>
+              <span className="font-secondary text-xs font-medium uppercase tracking-[0.05em] text-text-secondary">SYSTEM NAVIGATION CHANNELS</span>
               {navLinks.map((link) => (
                 <button
                   key={link.id}
                   onClick={() => setActiveView(link.id)}
-                  className={`w-full text-left py-3.5 px-4 rounded-xl font-mono text-xs uppercase tracking-wider transition-all flex items-center justify-between ${
+                  className={`w-full text-left py-3.5 px-4 rounded-xl font-sans text-[15px] font-semibold tracking-normal transition-all flex items-center justify-between ${
                     activeView === link.id
-                      ? 'bg-brand-blue/10 text-brand-blue font-black border border-brand-blue/20'
+                      ? 'bg-brand-blue/10 text-brand-blue font-bold border border-brand-blue/20'
                       : 'text-text-secondary hover:bg-slate-50 border border-transparent'
                   }`}
                   style={{ minHeight: '44px' }}
@@ -258,13 +258,13 @@ export default function App() {
             </div>
 
             <div className="pt-6 border-t border-slate-200 space-y-4">
-              <span className="block font-mono text-[8px] text-text-secondary uppercase tracking-widest">SECURE SOCIAL CONNECT</span>
+              <span className="block font-secondary text-xs font-medium uppercase tracking-[0.05em] text-text-secondary">SECURE SOCIAL CONNECT</span>
               <div className="grid grid-cols-2 gap-3">
                 <a
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-4 bg-slate-50 border border-slate-200 text-center font-mono text-[9px] uppercase font-bold tracking-wider text-text-secondary rounded-lg flex items-center justify-center gap-1.5 hover:bg-slate-100 transition-colors"
+                  className="py-3 px-4 bg-slate-50 border border-slate-200 text-center font-sans text-[15px] font-medium tracking-normal text-text-secondary rounded-lg flex items-center justify-center gap-1.5 hover:bg-slate-100 transition-colors"
                 >
                   <Github className="w-4 h-4" /> GitHub
                 </a>
@@ -272,7 +272,7 @@ export default function App() {
                   href={PERSONAL_INFO.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="py-3 px-4 bg-slate-50 border border-slate-200 text-center font-mono text-[9px] uppercase font-bold tracking-wider text-text-secondary rounded-lg flex items-center justify-center gap-1.5 hover:bg-slate-100 transition-colors"
+                  className="py-3 px-4 bg-slate-50 border border-slate-200 text-center font-sans text-[15px] font-medium tracking-normal text-text-secondary rounded-lg flex items-center justify-center gap-1.5 hover:bg-slate-100 transition-colors"
                 >
                   <Linkedin className="w-4 h-4" /> LinkedIn
                 </a>
@@ -283,7 +283,7 @@ export default function App() {
       </AnimatePresence>
 
       {/* MAIN LAYOUT CANVAS CONTAINER */}
-      <main className="max-w-6xl mx-auto px-4 py-8 flex-grow w-full relative z-30">
+      <main className="max-w-[1536px] xl:max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 py-8 flex-grow w-full relative z-30">
         <AnimatePresence mode="wait">
           <motion.div
             key={activeView}
@@ -324,7 +324,7 @@ export default function App() {
 
       {/* PROFESSIONAL UNIFORM FOOTER */}
       <footer className="border-t border-slate-200 bg-bg-secondary py-11 px-6 mt-16 relative z-20">
-        <div className="max-w-6xl mx-auto space-y-8">
+        <div className="max-w-[1536px] xl:max-w-[1600px] mx-auto px-4 md:px-8 lg:px-12 xl:px-16 space-y-8">
           
           {/* Main Footer Details Grid */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -332,25 +332,25 @@ export default function App() {
             {/* Tagline details branding column */}
             <div className="md:col-span-5 space-y-4">
               <div className="flex flex-col">
-                <span className="text-[8px] uppercase tracking-[0.3em] text-brand-blue font-bold">PORTFOLIO MATRIX V2.0</span>
-                <span className="font-sans font-black text-2xl tracking-tighter uppercase text-text-primary">Riya Shah.</span>
+                <span className="font-secondary text-[9px] uppercase tracking-[0.25em] text-brand-blue font-semibold">AI & ML Undergrad &bull; Product Builder</span>
+                <span className="font-sans font-black text-2xl tracking-tighter uppercase text-text-primary mt-1">Riya Shah.</span>
               </div>
-              <p className="text-xs text-text-secondary leading-relaxed font-sans max-w-sm font-light">
-                Exploring AI, product development, and industry research through practical projects and continuous learning.
+              <p className="text-xs text-text-secondary leading-relaxed font-secondary max-w-sm font-normal">
+                Exploring artificial intelligence, machine learning, and product development through practical projects and academic research.
               </p>
             </div>
 
             {/* Quick page link lists */}
             <div className="md:col-span-4 space-y-3">
-              <span className="block font-mono text-[9px] uppercase tracking-widest text-brand-blue font-bold">// ROUTING MATRIX</span>
-              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[10px] font-mono uppercase">
+              <span className="block font-secondary text-[11px] uppercase tracking-[0.15em] text-brand-blue font-bold">Quick Links</span>
+              <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-[13px] font-secondary text-text-secondary">
                 {navLinks.map((link) => (
                   <button
                     key={link.id}
                     onClick={() => setActiveView(link.id)}
-                    className="text-text-secondary hover:text-brand-blue text-left transition-colors cursor-pointer block py-0.5"
+                    className="text-text-secondary hover:text-brand-blue text-left transition-colors cursor-pointer block py-0.5 font-medium"
                   >
-                    &middot; {link.label.split(' ')[0]}
+                    {link.label}
                   </button>
                 ))}
               </div>
@@ -358,37 +358,37 @@ export default function App() {
 
             {/* Channel coordinates downloads */}
             <div className="md:col-span-3 space-y-4 text-left">
-              <span className="block font-mono text-[9px] uppercase tracking-widest text-brand-blue font-bold">// SECURE COGNITION PORTS</span>
-              <div className="text-[11px] space-y-2.5 font-mono">
+              <span className="block font-secondary text-[11px] uppercase tracking-[0.15em] text-brand-blue font-bold">Connect</span>
+              <div className="text-[13px] space-y-2.5 font-secondary">
                 <a 
                   href={`mailto:${PERSONAL_INFO.email}`} 
-                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate"
+                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate font-medium"
                 >
-                  <Mail className="w-3.5 h-3.5 shrink-0 text-text-secondary/60" /> Email
+                  <Mail className="w-4 h-4 shrink-0 text-text-secondary/60" /> Email
                 </a>
                 <a 
                   href={PERSONAL_INFO.github} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate"
+                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate font-medium"
                 >
-                  <Github className="w-3.5 h-3.5 shrink-0 text-text-secondary/60" /> GitHub
+                  <Github className="w-4 h-4 shrink-0 text-text-secondary/60" /> GitHub
                 </a>
                 <a 
                   href={PERSONAL_INFO.linkedin} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate"
+                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate font-medium"
                 >
-                  <Linkedin className="w-3.5 h-3.5 shrink-0 text-text-secondary/60" /> LinkedIn
+                  <Linkedin className="w-4 h-4 shrink-0 text-text-secondary/60" /> LinkedIn
                 </a>
                 <a 
                   href={PERSONAL_INFO.echotech} 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate"
+                  className="flex items-center gap-2 text-text-secondary hover:text-brand-blue transition-colors truncate font-medium"
                 >
-                  <ExternalLink className="w-3.5 h-3.5 shrink-0 text-text-secondary/60" /> EchoTech
+                  <ExternalLink className="w-4 h-4 shrink-0 text-text-secondary/60" /> EchoTech
                 </a>
                 
                 {/* PDF Resume download button */}
@@ -397,9 +397,9 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   download="Riya_Resume.pdf"
-                  className="w-full py-2.5 px-3 border border-slate-200 hover:border-brand-blue text-center font-mono text-[9px] uppercase tracking-widest font-extrabold rounded-lg text-text-primary hover:text-brand-blue transition-all flex items-center justify-center gap-1.5 cursor-pointer bg-bg-card hover:bg-bg-secondary shadow-sm"
+                  className="w-full py-2.5 px-3 border border-slate-200 hover:border-brand-blue text-center font-secondary text-xs font-semibold rounded-lg text-text-primary hover:text-brand-blue transition-all flex items-center justify-center gap-1.5 cursor-pointer bg-bg-card hover:bg-bg-secondary shadow-sm mt-2"
                 >
-                  <FileText className="w-3.5 h-3.5" /> Download CV / Resume
+                  <FileText className="w-4 h-4" /> Download CV / Resume
                 </a>
               </div>
             </div>
@@ -407,14 +407,14 @@ export default function App() {
           </div>
 
           {/* Social connections & Copyright row */}
-          <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-[9px] font-mono text-text-secondary uppercase tracking-widest">
-            <p>© 2026 Riya Shah &bull; Systems-First Portfolio</p>
-            <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center">
-              <span>Portfolio Version {PORTFOLIO_METADATA.version}</span>
+          <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-secondary text-text-secondary">
+            <p>© 2026 Riya Shah &bull; Academic & Developer Portfolio</p>
+            <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-center font-medium">
+              <span>Version {PORTFOLIO_METADATA.version}</span>
               <span className="hidden md:inline">&bull;</span>
               <span>Last Updated {PORTFOLIO_METADATA.lastUpdated}</span>
             </div>
-            <p>Built with React, TypeScript & Tailwind CSS &bull; Preserved Design Language</p>
+            <p>Built with React, TypeScript & Tailwind CSS</p>
           </div>
 
         </div>

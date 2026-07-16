@@ -98,7 +98,7 @@ interface SkillGroup {
 const SKILLS_BY_CATEGORY: SkillGroup[] = [
   {
     category: 'Research & Analysis',
-    color: 'border-l-brand-blue text-brand-blue',
+    color: 'border-l-brand-lavender text-brand-lavender',
     icon: BookOpen,
     skills: [
       'Industry Research',
@@ -119,7 +119,7 @@ const SKILLS_BY_CATEGORY: SkillGroup[] = [
   },
   {
     category: 'Communication',
-    color: 'border-l-brand-yellow text-brand-yellow',
+    color: 'border-l-brand-coral text-brand-coral',
     icon: FileText,
     skills: [
       'Technical Documentation',
@@ -129,7 +129,7 @@ const SKILLS_BY_CATEGORY: SkillGroup[] = [
   },
   {
     category: 'Professional',
-    color: 'border-l-brand-red text-brand-red',
+    color: 'border-l-brand-yellow text-brand-yellow',
     icon: Award,
     skills: [
       'Critical Thinking',
@@ -246,7 +246,7 @@ export default function ExperienceView({
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
                   
                   {/* Detailed Experience breakdown */}
-                  <div className={`lg:col-span-8 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 space-y-8 border-l-4 ${exp.accentColor} shadow-sm h-full`}>
+                  <div className={`lg:col-span-8 bg-bg-card border border-slate-200/50 rounded-3xl p-6 md:p-8 space-y-8 border-l-4 ${exp.accentColor} shadow-xs h-full`}>
                     
                     {/* Context Statement */}
                     <div className="space-y-2">
@@ -315,7 +315,7 @@ export default function ExperienceView({
                   {/* Right Column: Experience Snapshot Panel */}
                   <div className="lg:col-span-4 space-y-6 h-full">
                     {exp.snapshot && (
-                      <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-6 relative overflow-hidden">
+                      <div className="bg-bg-card border border-slate-200/50 rounded-3xl p-6 shadow-xs space-y-6 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-32 h-32 bg-brand-blue/5 rounded-full blur-3xl pointer-events-none" />
                         
                         <div className="space-y-1.5 pb-3 border-b border-slate-100">
@@ -383,7 +383,7 @@ export default function ExperienceView({
             return (
               <div 
                 key={idx} 
-                className={`bg-white border border-slate-200 rounded-3xl p-6 space-y-4 border-l-4 ${group.color} shadow-xs hover:shadow-sm transition-all`}
+                className={`bg-bg-card border border-slate-200/50 rounded-3xl p-6 space-y-4 border-l-4 ${group.color} shadow-xs hover:shadow-sm transition-all`}
               >
                 <div className="flex justify-between items-center pb-2 border-b border-slate-100">
                   <h4 className="font-sans font-black text-xs uppercase text-text-primary tracking-tight">

@@ -219,13 +219,13 @@ export default function ContactView() {
     >
       {/* SECTION 1: INTRODUCTION */}
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-widest font-bold">
+        <div className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs uppercase font-medium tracking-[0.05em]">
           <Mail className="w-3.5 h-3.5 text-brand-blue" /> RECRUITER GATEWAY
         </div>
-        <h2 className="text-3xl md:text-4xl font-sans font-black uppercase text-text-primary tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-sans font-semibold uppercase text-text-primary tracking-tight">
           Let's Connect
         </h2>
-        <p className="text-sm text-text-secondary font-sans font-light max-w-2xl leading-relaxed">
+        <p className="font-sans text-[14px] text-text-secondary max-w-2xl leading-[22px]">
           I'm always open to discussing internships, research opportunities, software engineering roles, AI projects, collaborations, and innovative ideas.
         </p>
       </div>
@@ -236,14 +236,14 @@ export default function ContactView() {
         {/* LEFT COLUMN: SECTION 2 — CONTACT METHODS & FORM */}
         <div className="lg:col-span-7 space-y-6">
           <div className="border-b border-slate-100 pb-2">
-            <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// Direct Channels</span>
-            <h3 className="text-lg font-sans font-black text-text-primary uppercase tracking-tight">Contact Methods</h3>
+            <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// Direct Channels</span>
+            <h3 className="text-lg font-sans font-semibold text-text-primary uppercase tracking-tight">Contact Methods</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             
             {/* EMAIL CARD */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-brand-blue rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-sm">
+            <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-blue rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-xs">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <div className="p-2 bg-brand-blue/5 border border-brand-blue/10 rounded-xl">
@@ -258,17 +258,17 @@ export default function ContactView() {
                   </button>
                 </div>
                 <div className="space-y-1 text-left">
-                  <h4 className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">Email Inquiry</h4>
-                  <p className="text-[11px] text-text-secondary font-sans font-light leading-relaxed">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">Email Inquiry</h4>
+                  <p className="text-[11px] text-text-secondary font-sans leading-relaxed">
                     Direct line for professional placements, internship positions, and academic inquiries.
                   </p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="font-mono text-[9px] text-text-secondary font-semibold truncate max-w-[140px] md:max-w-[110px] lg:max-w-[130px]">{PERSONAL_INFO.email}</span>
+                <span className="font-secondary text-[10px] text-text-secondary font-semibold truncate max-w-[140px] md:max-w-[110px] lg:max-w-[130px]">{PERSONAL_INFO.email}</span>
                 <a 
                   href={`mailto:${PERSONAL_INFO.email}`}
-                  className="px-2.5 py-1 bg-brand-blue/5 hover:bg-brand-blue text-brand-blue hover:text-white rounded-lg font-mono text-[8px] font-bold uppercase tracking-wider transition-all duration-150 flex items-center gap-1 cursor-pointer"
+                  className="px-2.5 py-1 bg-brand-blue/5 hover:bg-brand-blue text-brand-blue hover:text-white rounded-lg font-secondary text-[9px] font-semibold uppercase tracking-[0.05em] transition-all duration-150 flex items-center gap-1 cursor-pointer"
                 >
                   Open <ArrowUpRight className="w-2.5 h-2.5" />
                 </a>
@@ -276,7 +276,7 @@ export default function ContactView() {
             </div>
 
             {/* LINKEDIN CARD */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-brand-green rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-sm">
+            <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-green rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-xs">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <div className="p-2 bg-brand-green/5 border border-brand-green/10 rounded-xl">
@@ -284,19 +284,19 @@ export default function ContactView() {
                   </div>
                 </div>
                 <div className="space-y-1 text-left">
-                  <h4 className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">LinkedIn Network</h4>
-                  <p className="text-[11px] text-text-secondary font-sans font-light leading-relaxed">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">LinkedIn Network</h4>
+                  <p className="text-[11px] text-text-secondary font-sans leading-relaxed">
                     Connect for professional recommendations, direct messaging, and industry network updates.
                   </p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="font-mono text-[9px] text-text-secondary font-semibold">@riya-shah</span>
+                <span className="font-secondary text-[11px] text-text-secondary font-semibold">@riya-shah</span>
                 <a 
                   href={PERSONAL_INFO.linkedin}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-2.5 py-1 bg-brand-green/5 hover:bg-brand-green text-brand-green hover:text-white rounded-lg font-mono text-[8px] font-bold uppercase tracking-wider transition-all duration-150 flex items-center gap-1 cursor-pointer"
+                  className="px-2.5 py-1 bg-brand-green/5 hover:bg-brand-green text-brand-green hover:text-white rounded-lg font-secondary text-[9px] font-semibold uppercase tracking-[0.05em] transition-all duration-150 flex items-center gap-1 cursor-pointer"
                 >
                   Open <ArrowUpRight className="w-2.5 h-2.5" />
                 </a>
@@ -304,27 +304,27 @@ export default function ContactView() {
             </div>
 
             {/* GITHUB CARD */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-brand-red rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-sm">
+            <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-coral rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-xs">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
-                  <div className="p-2 bg-brand-red/5 border border-brand-red/10 rounded-xl">
-                    <Github className="w-4 h-4 text-brand-red" />
+                  <div className="p-2 bg-brand-coral/5 border border-brand-coral/10 rounded-xl">
+                    <Github className="w-4 h-4 text-brand-coral" />
                   </div>
                 </div>
                 <div className="space-y-1 text-left">
-                  <h4 className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">Source Sandbox</h4>
-                  <p className="text-[11px] text-text-secondary font-sans font-light leading-relaxed">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">Source Sandbox</h4>
+                  <p className="text-[11px] text-text-secondary font-sans leading-relaxed">
                     Explore my compiled code, DSA libraries, solver frameworks, and active AI deployments.
                   </p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="font-mono text-[9px] text-text-secondary font-semibold">@riyas2509</span>
+                <span className="font-secondary text-[11px] text-text-secondary font-semibold">@riyas2509</span>
                 <a 
                   href={PERSONAL_INFO.github}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-2.5 py-1 bg-brand-red/5 hover:bg-brand-red text-brand-red hover:text-white rounded-lg font-mono text-[8px] font-bold uppercase tracking-wider transition-all duration-150 flex items-center gap-1 cursor-pointer"
+                  className="px-2.5 py-1 bg-brand-coral/5 hover:bg-brand-coral text-brand-coral hover:text-white rounded-lg font-secondary text-[9px] font-semibold uppercase tracking-[0.05em] transition-all duration-150 flex items-center gap-1 cursor-pointer"
                 >
                   Open <ArrowUpRight className="w-2.5 h-2.5" />
                 </a>
@@ -332,7 +332,7 @@ export default function ContactView() {
             </div>
 
             {/* ECHOTECH CARD */}
-            <div className="bg-white border border-slate-200 border-l-4 border-l-brand-yellow rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-sm">
+            <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-yellow rounded-3xl p-5 hover:shadow-md transition-all duration-200 flex flex-col justify-between h-48 group shadow-xs">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <div className="p-2 bg-brand-yellow/5 border border-brand-yellow/10 rounded-xl">
@@ -340,19 +340,19 @@ export default function ContactView() {
                   </div>
                 </div>
                 <div className="space-y-1 text-left">
-                  <h4 className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">EchoTech Ecosystem</h4>
-                  <p className="text-[11px] text-text-secondary font-sans font-light leading-relaxed">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">EchoTech Ecosystem</h4>
+                  <p className="text-[11px] text-text-secondary font-sans leading-relaxed">
                     Visit my self-directed digital workshop, housing live demos and full-stack software products.
                   </p>
                 </div>
               </div>
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between">
-                <span className="font-mono text-[9px] text-text-secondary font-semibold">echotechai.in</span>
+                <span className="font-secondary text-[11px] text-text-secondary font-semibold">echotechai.in</span>
                 <a 
                   href={PERSONAL_INFO.echotech}
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="px-2.5 py-1 bg-brand-yellow/5 hover:bg-brand-yellow text-brand-yellow hover:text-white rounded-lg font-mono text-[8px] font-bold uppercase tracking-wider transition-all duration-150 flex items-center gap-1 cursor-pointer"
+                  className="px-2.5 py-1 bg-brand-yellow/5 hover:bg-brand-yellow text-brand-yellow hover:text-white rounded-lg font-secondary text-[9px] font-semibold uppercase tracking-[0.05em] transition-all duration-150 flex items-center gap-1 cursor-pointer"
                 >
                   Open <ArrowUpRight className="w-2.5 h-2.5" />
                 </a>
@@ -362,25 +362,25 @@ export default function ContactView() {
           </div>
 
           {/* PHYSICAL LOCATION SUB-CARD */}
-          <div className="bg-bg-secondary border border-slate-200 p-4 rounded-2xl flex items-center justify-between shadow-xs">
-            <span className="font-mono text-[8px] text-text-secondary uppercase tracking-widest font-bold flex items-center gap-1.5">
-              <MapPin className="w-3.5 h-3.5 text-brand-red" /> Current Base Location
+          <div className="bg-bg-secondary border border-slate-200/50 p-4 rounded-2xl flex items-center justify-between shadow-xs">
+            <span className="font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-semibold flex items-center gap-1.5">
+              <MapPin className="w-3.5 h-3.5 text-brand-coral" /> Current Base Location
             </span>
             <span className="font-sans text-xs font-semibold text-text-primary">{PERSONAL_INFO.location}</span>
           </div>
 
           {/* HIGH-FIDELITY, ACCESSIBLE, SPA-SAFE CONTACT FORM */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-6">
+          <div className="bg-bg-card border border-slate-200/50 rounded-3xl p-6 shadow-xs space-y-6">
             <div className="border-b border-slate-100 pb-2">
-              <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// Secure Communication Gateway</span>
-              <h3 className="text-lg font-sans font-black text-text-primary uppercase tracking-tight">Send a Direct Message</h3>
+              <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// Secure Communication Gateway</span>
+              <h3 className="text-lg font-sans font-semibold text-text-primary uppercase tracking-tight">Send a Direct Message</h3>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4" noValidate>
               
               {/* HONEYPOT SPAM PROTECTION */}
               <div className="hidden" aria-hidden="true">
-                <label htmlFor="website-honeypot">Leave this blank</label>
+                <label htmlFor="website-honeypot" className="font-sans">Leave this blank</label>
                 <input
                   id="website-honeypot"
                   type="text"
@@ -394,7 +394,7 @@ export default function ContactView() {
 
               {/* FULL NAME */}
               <div className="space-y-1 text-left">
-                <label htmlFor="contact-name" className="block font-mono text-[9px] text-text-secondary uppercase font-bold tracking-wider">
+                <label htmlFor="contact-name" className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">
                   Full Name <span className="text-brand-red font-semibold">*</span>
                 </label>
                 <input
@@ -418,14 +418,14 @@ export default function ContactView() {
                 />
                 {errors.name && (
                   <p id="name-error" role="alert" className="text-[10px] text-brand-red font-sans font-medium flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3 shrink-0" /> {errors.name}
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.name}
                   </p>
                 )}
               </div>
 
               {/* EMAIL ADDRESS */}
               <div className="space-y-1 text-left">
-                <label htmlFor="contact-email" className="block font-mono text-[9px] text-text-secondary uppercase font-bold tracking-wider">
+                <label htmlFor="contact-email" className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">
                   Email Address <span className="text-brand-red font-semibold">*</span>
                 </label>
                 <input
@@ -449,14 +449,14 @@ export default function ContactView() {
                 />
                 {errors.email && (
                   <p id="email-error" role="alert" className="text-[10px] text-brand-red font-sans font-medium flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3 shrink-0" /> {errors.email}
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.email}
                   </p>
                 )}
               </div>
 
               {/* SUBJECT */}
               <div className="space-y-1 text-left">
-                <label htmlFor="contact-subject" className="block font-mono text-[9px] text-text-secondary uppercase font-bold tracking-wider">
+                <label htmlFor="contact-subject" className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">
                   Subject <span className="text-brand-red font-semibold">*</span>
                 </label>
                 <input
@@ -480,7 +480,7 @@ export default function ContactView() {
                 />
                 {errors.subject && (
                   <p id="subject-error" role="alert" className="text-[10px] text-brand-red font-sans font-medium flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3 shrink-0" /> {errors.subject}
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.subject}
                   </p>
                 )}
               </div>
@@ -488,10 +488,10 @@ export default function ContactView() {
               {/* MESSAGE TEXTAREA */}
               <div className="space-y-1 text-left">
                 <div className="flex justify-between items-center">
-                  <label htmlFor="contact-message" className="block font-mono text-[9px] text-text-secondary uppercase font-bold tracking-wider">
+                  <label htmlFor="contact-message" className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">
                     Message <span className="text-brand-red font-semibold">*</span>
                   </label>
-                  <span className="font-mono text-[8px] text-text-secondary tracking-tight">
+                  <span className="font-secondary text-[11px] text-text-secondary tracking-[0.02em]">
                     {formData.message.length}/2000 chars
                   </span>
                 </div>
@@ -516,7 +516,7 @@ export default function ContactView() {
                 />
                 {errors.message && (
                   <p id="message-error" role="alert" className="text-[10px] text-brand-red font-sans font-medium flex items-center gap-1">
-                    <AlertCircle className="w-3 h-3 shrink-0" /> {errors.message}
+                    <AlertCircle className="w-3.5 h-3.5 shrink-0" /> {errors.message}
                   </p>
                 )}
               </div>
@@ -526,8 +526,8 @@ export default function ContactView() {
                 <div role="status" className="p-4 bg-brand-green/5 border border-brand-green/20 text-brand-green rounded-2xl text-xs font-sans flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-brand-green" />
                   <div>
-                    <p className="font-bold uppercase tracking-wide text-[10px] text-brand-green">Transmission Succeeded</p>
-                    <p className="font-light mt-0.5 text-text-primary">{successMessage}</p>
+                    <p className="font-secondary font-semibold uppercase tracking-[0.05em] text-xs text-brand-green">Transmission Succeeded</p>
+                    <p className="font-sans text-xs text-text-primary mt-0.5">{successMessage}</p>
                   </div>
                 </div>
               )}
@@ -536,8 +536,8 @@ export default function ContactView() {
                 <div role="status" className="p-4 bg-brand-red/5 border border-brand-red/20 text-brand-red rounded-2xl text-xs font-sans flex items-start gap-2.5">
                   <AlertCircle className="w-4 h-4 shrink-0 mt-0.5 text-brand-red" />
                   <div>
-                    <p className="font-bold uppercase tracking-wide text-[10px] text-brand-red">Transmission Blocked</p>
-                    <p className="font-light mt-0.5 text-text-primary">{errorMessage}</p>
+                    <p className="font-secondary font-semibold uppercase tracking-[0.05em] text-xs text-brand-red">Transmission Blocked</p>
+                    <p className="font-sans text-xs text-text-primary mt-0.5">{errorMessage}</p>
                   </div>
                 </div>
               )}
@@ -546,7 +546,7 @@ export default function ContactView() {
               <button
                 type="submit"
                 disabled={isSending || isFormInvalid}
-                className="w-full px-5 py-3 bg-brand-blue hover:bg-brand-blue/90 disabled:bg-slate-100 disabled:text-text-secondary/40 text-white font-mono text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed shadow-sm"
+                className="w-full px-5 py-3 bg-brand-blue hover:bg-brand-blue/90 disabled:bg-slate-100 disabled:text-text-secondary/40 text-white font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer disabled:cursor-not-allowed shadow-sm"
               >
                 {isSending ? (
                   <>
@@ -570,13 +570,13 @@ export default function ContactView() {
         <div className="lg:col-span-5 space-y-6">
           
           {/* PROFESSIONAL RESUME EXPERIENCE CARD (SECTIONS 1-5) */}
-          <div className="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-5">
+          <div className="bg-bg-card border border-slate-200/50 rounded-3xl p-6 shadow-xs space-y-5">
             {/* SECTION 1: Resume Title & Subtitle */}
             <div className="flex items-start justify-between border-b border-slate-100 pb-3">
               <div className="space-y-1 text-left">
-                <span className="block font-mono text-[8px] text-brand-blue uppercase font-bold tracking-widest">// Credentials & Focus</span>
-                <h4 className="font-sans font-black text-sm text-text-primary uppercase tracking-tight">Professional Resume</h4>
-                <p className="text-[11px] text-text-secondary font-sans font-light leading-relaxed">
+                <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// Credentials & Focus</span>
+                <h4 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Professional Resume</h4>
+                <p className="font-sans text-xs text-text-secondary leading-relaxed">
                   A concise summary of my academic background, technical projects, research experience, and professional milestones.
                 </p>
               </div>
@@ -587,7 +587,7 @@ export default function ContactView() {
 
             {/* SECTION 2: Resume Snapshot */}
             <div className="space-y-2 text-left">
-              <span className="block font-mono text-[8px] text-text-secondary uppercase font-bold tracking-wider">Resume Snapshot</span>
+              <span className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">Resume Snapshot</span>
               <div className="grid grid-cols-1 gap-2">
                 {[
                   'AI & ML Undergraduate',
@@ -596,7 +596,7 @@ export default function ContactView() {
                   'Top 10 Finalist – Scaler LaunchPad',
                   'ATS-Friendly PDF'
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2 text-xs text-text-primary font-sans font-light">
+                  <div key={idx} className="flex items-center gap-2 text-xs text-text-primary font-sans">
                     <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
                     <span>{item}</span>
                   </div>
@@ -611,7 +611,7 @@ export default function ContactView() {
                 href={LINKS.resume}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-3 py-2.5 bg-white border border-slate-200 hover:border-brand-blue text-text-primary hover:bg-slate-50 font-mono text-[9px] font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs focus:ring-2 focus:ring-brand-blue/20 outline-none"
+                className="px-3 py-2.5 bg-white border border-slate-200/60 hover:border-brand-blue text-text-primary hover:bg-slate-50 font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-xs focus:ring-2 focus:ring-brand-blue/20 outline-none"
               >
                 <Globe className="w-3.5 h-3.5 text-brand-blue" /> View Resume
               </a>
@@ -620,7 +620,7 @@ export default function ContactView() {
               <a
                 href={LINKS.resume}
                 download="Riya_Resume.pdf"
-                className="px-3 py-2.5 bg-brand-blue hover:bg-brand-blue/90 text-white font-mono text-[9px] font-bold uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm focus:ring-2 focus:ring-brand-blue/20 outline-none"
+                className="px-3 py-2.5 bg-brand-blue hover:bg-brand-blue/90 text-white font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm focus:ring-2 focus:ring-brand-blue/20 outline-none"
               >
                 <Download className="w-3.5 h-3.5" /> Download PDF
               </a>
@@ -628,28 +628,28 @@ export default function ContactView() {
 
             {/* SECTION 4: Resume Metadata */}
             <div className="bg-bg-secondary border border-slate-100 rounded-2xl p-4 space-y-2 text-left">
-              <span className="block font-mono text-[8px] text-text-secondary uppercase font-bold tracking-wider">Resume Metadata</span>
+              <span className="block font-secondary text-xs text-text-secondary uppercase font-semibold tracking-[0.05em]">Resume Metadata</span>
               <div className="grid grid-cols-2 gap-3 text-xs font-sans">
                 <div>
-                  <span className="block text-[8px] font-mono text-text-secondary uppercase">Format</span>
-                  <span className="font-bold text-text-primary">PDF</span>
+                  <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Format</span>
+                  <span className="font-semibold text-text-primary">PDF</span>
                 </div>
                 <div>
-                  <span className="block text-[8px] font-mono text-text-secondary uppercase">Version</span>
-                  <span className="font-bold text-text-primary">Latest</span>
+                  <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Version</span>
+                  <span className="font-semibold text-text-primary">Latest</span>
                 </div>
               </div>
               <div className="pt-2 border-t border-slate-200/50">
-                <span className="block text-[8px] font-mono text-text-secondary uppercase">Purpose</span>
-                <span className="text-xs text-text-primary font-light">Internships, Research, Software Engineering, AI/ML Roles</span>
+                <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Purpose</span>
+                <span className="text-xs text-text-primary">Internships, Research, Software Engineering, AI/ML Roles</span>
               </div>
             </div>
 
             {/* SECTION 5: Professional Note */}
-            <div className="p-3 bg-slate-50 border border-slate-200 rounded-2xl text-[10px] text-text-secondary font-sans font-light leading-relaxed text-left flex gap-2">
+            <div className="p-3 bg-slate-50 border border-slate-200/50 rounded-2xl text-xs text-text-secondary font-sans leading-relaxed text-left flex gap-2">
               <FileCheck className="w-4 h-4 text-brand-blue shrink-0 mt-0.5" />
               <span>
-                <strong>Note:</strong> The resume is updated regularly to reflect current projects, experience, and technical growth.
+                <strong className="font-semibold">Note:</strong> The resume is updated regularly to reflect current projects, experience, and technical growth.
               </span>
             </div>
           </div>
@@ -664,13 +664,13 @@ export default function ContactView() {
         {/* SECTION 1: Title & Subtitle */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 text-left">
           <div className="space-y-1.5">
-            <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// Evaluation Hub</span>
-            <h3 className="text-xl font-sans font-black text-text-primary uppercase tracking-tight">Recruiter Quick Actions</h3>
-            <p className="text-xs text-text-secondary font-sans font-light">
+            <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// Evaluation Hub</span>
+            <h3 className="text-xl font-sans font-semibold text-text-primary uppercase tracking-tight">Recruiter Quick Actions</h3>
+            <p className="font-sans text-xs text-text-secondary">
               Everything you need to evaluate my profile in one place.
             </p>
           </div>
-          <div className="flex items-center gap-2 text-[9px] font-mono text-text-secondary shrink-0 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full">
+          <div className="flex items-center gap-2 text-xs font-secondary font-semibold text-text-secondary shrink-0 bg-slate-50 border border-slate-200 px-3 py-1.5 rounded-full tracking-[0.05em]">
             <span>NATIVE PORTFOLIO EXPORT:</span>
             <button 
               onClick={() => window.print()}
@@ -690,14 +690,14 @@ export default function ContactView() {
             href={LINKS.resume}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue shadow-xs"
             aria-label="View Resume (Opens in a new tab)"
           >
             <div className="p-3 bg-brand-blue/5 border border-brand-blue/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
               <FileText className="w-5 h-5 text-brand-blue" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">View Resume</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5 flex items-center gap-0.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">View Resume</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 flex items-center gap-0.5 tracking-wider">
               Open PDF <ExternalLink className="w-2 h-2" />
             </span>
           </a>
@@ -706,14 +706,14 @@ export default function ContactView() {
           <a
             href={LINKS.resume}
             download="Riya_Resume.pdf"
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-green rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-green rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-green/20 focus:border-brand-green shadow-xs"
             aria-label="Download Resume PDF"
           >
             <div className="p-3 bg-brand-green/5 border border-brand-green/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
               <Download className="w-5 h-5 text-brand-green" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">Download</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">Download</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 tracking-wider">
               Riya_Resume.pdf
             </span>
           </a>
@@ -723,14 +723,14 @@ export default function ContactView() {
             href={LINKS.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue shadow-xs"
             aria-label="View LinkedIn Profile"
           >
             <div className="p-3 bg-brand-blue/5 border border-brand-blue/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
               <Linkedin className="w-5 h-5 text-brand-blue" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">LinkedIn</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">LinkedIn</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 tracking-wider">
               Connect
             </span>
           </a>
@@ -740,14 +740,14 @@ export default function ContactView() {
             href={LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-red rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-red/20 focus:border-brand-red"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-coral rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-coral/20 focus:border-brand-coral shadow-xs"
             aria-label="View GitHub Profile"
           >
-            <div className="p-3 bg-brand-red/5 border border-brand-red/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
-              <Github className="w-5 h-5 text-brand-red" />
+            <div className="p-3 bg-brand-coral/5 border border-brand-coral/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
+              <Github className="w-5 h-5 text-brand-coral" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">GitHub</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">GitHub</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 tracking-wider">
               Repositories
             </span>
           </a>
@@ -757,14 +757,14 @@ export default function ContactView() {
             href={LINKS.echotech}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-yellow rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-yellow/20 focus:border-brand-yellow"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-yellow rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-yellow/20 focus:border-brand-yellow shadow-xs"
             aria-label="Visit EchoTech Website"
           >
             <div className="p-3 bg-brand-yellow/5 border border-brand-yellow/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
               <Building className="w-5 h-5 text-brand-yellow" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">EchoTech</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">EchoTech</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 tracking-wider">
               echotechai.in
             </span>
           </a>
@@ -772,14 +772,14 @@ export default function ContactView() {
           {/* Action 6: Email Me */}
           <a
             href={`mailto:${PERSONAL_INFO.email}`}
-            className="flex flex-col items-center justify-center p-5 bg-white border border-slate-200 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue"
+            className="flex flex-col items-center justify-center p-5 bg-bg-card border border-slate-200/50 hover:border-brand-blue rounded-3xl text-center group transition-all duration-200 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-brand-blue/20 focus:border-brand-blue shadow-xs"
             aria-label="Email Riya Shah"
           >
             <div className="p-3 bg-brand-blue/5 border border-brand-blue/10 rounded-2xl mb-3 group-hover:scale-105 transition-transform duration-150">
               <Mail className="w-5 h-5 text-brand-blue" />
             </div>
-            <span className="font-sans font-black text-xs text-text-primary uppercase tracking-tight">Email Me</span>
-            <span className="font-mono text-[8px] text-text-secondary uppercase mt-1.5">
+            <span className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">Email Me</span>
+            <span className="font-secondary text-[10px] text-text-secondary uppercase mt-1.5 tracking-wider">
               Direct Contact
             </span>
           </a>
@@ -790,15 +790,15 @@ export default function ContactView() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
           
           {/* SECTION 3: Availability Status */}
-          <div className="md:col-span-7 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4">
+          <div className="md:col-span-7 bg-bg-card border border-slate-200/50 rounded-3xl p-6 shadow-xs space-y-4">
             <div className="flex items-center justify-between border-b border-slate-100 pb-2.5">
               <div className="space-y-0.5 text-left">
-                <span className="block font-mono text-[8px] text-brand-green uppercase font-bold tracking-widest">// Current Status</span>
-                <h4 className="font-sans font-black text-sm text-text-primary uppercase tracking-tight">Status &amp; Availability</h4>
+                <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// Current Status</span>
+                <h4 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Status &amp; Availability</h4>
               </div>
               <div className="flex items-center gap-1.5 px-2 py-1 bg-brand-green/5 border border-brand-green/20 rounded-full">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-pulse" />
-                <span className="font-mono text-[8px] text-brand-green font-bold uppercase">Currently Open To</span>
+                <span className="font-secondary text-[9px] text-brand-green font-bold uppercase tracking-wider">Currently Open To</span>
               </div>
             </div>
 
@@ -810,7 +810,7 @@ export default function ContactView() {
                 'Research Opportunities',
                 'Product Development Opportunities'
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center gap-2 text-xs text-text-primary font-sans font-light">
+                <div key={idx} className="flex items-center gap-2 text-xs text-text-primary font-sans">
                   <CheckCircle2 className="w-3.5 h-3.5 text-brand-green shrink-0" />
                   <span>{item}</span>
                 </div>
@@ -819,29 +819,29 @@ export default function ContactView() {
           </div>
 
           {/* SECTION 4: Response Expectations */}
-          <div className="md:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 shadow-sm space-y-4 flex flex-col justify-between text-left">
+          <div className="md:col-span-5 bg-bg-card border border-slate-200/50 rounded-3xl p-6 shadow-xs space-y-4 flex flex-col justify-between text-left">
             <div className="border-b border-slate-100 pb-2.5">
-              <span className="block font-mono text-[8px] text-brand-blue uppercase font-bold tracking-widest">// Communication Channels</span>
-              <h4 className="font-sans font-black text-sm text-text-primary uppercase tracking-tight">Response Expectations</h4>
+              <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// Communication Channels</span>
+              <h4 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Response Expectations</h4>
             </div>
 
             <div className="grid grid-cols-3 gap-3 text-xs font-sans py-1">
               <div>
-                <span className="block text-[8px] font-mono text-text-secondary uppercase">Preferred</span>
-                <span className="font-bold text-text-primary flex items-center gap-1 mt-1">
+                <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Preferred</span>
+                <span className="font-semibold text-text-primary flex items-center gap-1 mt-1 text-xs">
                   <Mail className="w-3.5 h-3.5 text-brand-blue" /> Email
                 </span>
               </div>
               <div>
-                <span className="block text-[8px] font-mono text-text-secondary uppercase">Typical SLA</span>
-                <span className="font-bold text-text-primary flex items-center gap-1 mt-1">
+                <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Typical SLA</span>
+                <span className="font-semibold text-text-primary flex items-center gap-1 mt-1 text-xs">
                   <Clock className="w-3.5 h-3.5 text-brand-green" /> 24–48 hrs
                 </span>
               </div>
               <div>
-                <span className="block text-[8px] font-mono text-text-secondary uppercase">Timezone</span>
-                <span className="font-bold text-text-primary flex items-center gap-1 mt-1">
-                  <MapPin className="w-3.5 h-3.5 text-brand-red" /> IST (India)
+                <span className="block text-[10px] font-secondary text-text-secondary uppercase font-medium tracking-[0.05em]">Timezone</span>
+                <span className="font-semibold text-text-primary flex items-center gap-1 mt-1 text-xs">
+                  <MapPin className="w-3.5 h-3.5 text-brand-coral" /> IST (India)
                 </span>
               </div>
             </div>
@@ -852,13 +852,13 @@ export default function ContactView() {
       </div>
 
       {/* SECTION 5: PROFESSIONAL CLOSING */}
-      <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 text-center space-y-4 shadow-sm relative overflow-hidden border-t-4 border-t-brand-blue">
+      <div className="bg-bg-card border border-slate-200/50 rounded-3xl p-6 md:p-8 text-center space-y-4 shadow-xs relative overflow-hidden border-t-4 border-t-brand-blue">
         <div className="absolute top-0 right-0 w-24 h-24 bg-brand-blue/5 rounded-full blur-xl pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-24 h-24 bg-brand-green/5 rounded-full blur-xl pointer-events-none" />
-        <p className="text-xs md:text-sm text-text-secondary font-sans font-light leading-relaxed max-w-3xl mx-auto">
+        <p className="font-sans text-xs md:text-sm text-text-secondary leading-relaxed max-w-3xl mx-auto">
           Thank you for taking the time to explore my professional history, academic training, and applied research milestones. If you believe my technical competency and analytical drive align with your engineering organization, I would be delighted to discuss how I can contribute to your teams.
         </p>
-        <div className="font-mono text-[9px] text-text-secondary uppercase tracking-widest font-bold">
+        <div className="font-secondary text-[11px] text-text-secondary uppercase tracking-[0.05em] font-semibold">
           // Let's build meaningful technology together
         </div>
       </div>
@@ -868,11 +868,11 @@ export default function ContactView() {
         {/* Header Block Section */}
         <div className="border-b-2 border-stone-850 pb-3.5 mb-4 flex justify-between items-end">
           <div>
-            <h1 className="text-2xl font-black tracking-tight uppercase text-stone-950">{PERSONAL_INFO.name}</h1>
+            <h1 className="text-2xl font-bold tracking-tight uppercase text-stone-950">{PERSONAL_INFO.name}</h1>
             <p className="text-xs text-stone-600 font-semibold tracking-wide mt-0.5">{PERSONAL_INFO.title}</p>
             <p className="text-[10px] text-stone-500 mt-0.5">{PERSONAL_INFO.subtitle}</p>
           </div>
-          <div className="text-right text-[9px] text-stone-600 leading-normal font-mono">
+          <div className="text-right text-[10px] text-stone-600 leading-normal font-secondary font-medium tracking-wide">
             <div>📍 {PERSONAL_INFO.location}</div>
             <div>✉️ {PERSONAL_INFO.email}</div>
             <div>📞 {PERSONAL_INFO.phone}</div>
@@ -883,30 +883,30 @@ export default function ContactView() {
 
         {/* Core Narrative / Objective Statement */}
         <div className="mb-4">
-          <h2 className="text-[11px] font-mono tracking-wider text-stone-850 uppercase font-black border-b border-stone-200 pb-0.5 mb-1.5">// PROFESSIONAL STATEMENT</h2>
+          <h2 className="text-[11px] font-secondary tracking-wider text-stone-850 uppercase font-semibold border-b border-stone-200 pb-0.5 mb-1.5">// PROFESSIONAL STATEMENT</h2>
           <p className="text-xs text-stone-700 leading-relaxed font-light">{PERSONAL_INFO.bio}</p>
         </div>
 
         {/* Education Credentials Block */}
         <div className="mb-4">
-          <h2 className="text-[11px] font-mono tracking-wider text-stone-850 uppercase font-black border-b border-stone-200 pb-0.5 mb-1.5">// ACADEMIC TIMELINE</h2>
+          <h2 className="text-[11px] font-secondary tracking-wider text-stone-850 uppercase font-semibold border-b border-stone-200 pb-0.5 mb-1.5">// ACADEMIC TIMELINE</h2>
           <div className="space-y-2">
             <div className="flex justify-between items-start">
               <div>
                 <span className="text-xs font-bold text-stone-900">B.Tech in Artificial Intelligence and Machine Learning</span>
                 <span className="text-[10px] text-stone-600 block">JG University</span>
               </div>
-              <span className="text-[10px] font-mono text-stone-500">2024 - Present</span>
+              <span className="text-[10px] font-secondary font-medium text-stone-500">2024 - Present</span>
             </div>
             <p className="text-[10px] leading-relaxed text-stone-600">
-              <strong className="font-semibold text-stone-700 font-mono text-[9px]">Coursework Core:</strong> Data Structures and Algorithms (DSA), Database Management Systems (DBMS), Python Scripting, Artificial Intelligence Fundamentals, Supervised ML Networks, Applied Probability & Statistics.
+              <strong className="font-semibold text-stone-700 font-secondary text-[10px] tracking-wide">Coursework Core:</strong> Data Structures and Algorithms (DSA), Database Management Systems (DBMS), Python Scripting, Artificial Intelligence Fundamentals, Supervised ML Networks, Applied Probability & Statistics.
             </p>
           </div>
         </div>
 
         {/* Experience Timeline Block */}
         <div className="mb-4">
-          <h2 className="text-[11px] font-mono tracking-wider text-stone-850 uppercase font-black border-b border-stone-200 pb-0.5 mb-1.5">// INDUSTRY RESEARCH &amp; EXPERIENCE</h2>
+          <h2 className="text-[11px] font-secondary tracking-wider text-stone-850 uppercase font-semibold border-b border-stone-200 pb-0.5 mb-1.5">// INDUSTRY RESEARCH &amp; EXPERIENCE</h2>
           <div className="space-y-3">
             <div>
               <div className="flex justify-between items-start">
@@ -914,7 +914,7 @@ export default function ContactView() {
                   <span className="text-xs font-bold text-stone-900">Industry Research Intern</span>
                   <span className="text-[10px] text-stone-600 block">Ahmedabad Management Association (AMA)</span>
                 </div>
-                <span className="text-[10px] font-mono text-stone-500">Apr 2026 – Jun 2026</span>
+                <span className="text-[10px] font-secondary font-medium text-stone-500">Apr 2026 – Jun 2026</span>
               </div>
               <ul className="list-disc list-outside ml-4 mt-1.5 text-[11px] text-stone-800 space-y-1">
                 <li>Conducted comprehensive AI workflows research across 8 major industries mapping workflows and technology bottlenecks.</li>
@@ -928,12 +928,12 @@ export default function ContactView() {
 
         {/* Key Product Engineering Projects */}
         <div className="mb-4">
-          <h2 className="text-[11px] font-mono tracking-wider text-stone-850 uppercase font-black border-b border-stone-200 pb-0.5 mb-1.5">// HIGHLIGHTED TECHNICAL PROJECTS</h2>
+          <h2 className="text-[11px] font-secondary tracking-wider text-stone-850 uppercase font-semibold border-b border-stone-200 pb-0.5 mb-1.5">// HIGHLIGHTED TECHNICAL PROJECTS</h2>
           <div className="grid grid-cols-2 gap-4">
             <div>
               <div className="flex justify-between border-b border-stone-100 pb-0.5 mb-1">
                 <span className="text-[10px] font-bold text-stone-900">EchoNote &mdash; AI Notes Platform</span>
-                <span className="text-[8px] font-mono text-stone-500">Google AI Studio</span>
+                <span className="text-[9px] font-secondary font-semibold text-stone-500 tracking-wide">Google AI Studio</span>
               </div>
               <p className="text-[10px] text-stone-600 leading-relaxed font-light">
                 Voicenotes automation converting speech to markdown briefs, summaries, sentiment records, and checklists sponsored by ASK Investment Managers.
@@ -943,7 +943,7 @@ export default function ContactView() {
             <div>
               <div className="flex justify-between border-b border-stone-100 pb-0.5 mb-1">
                 <span className="text-[10px] font-bold text-stone-900">Sudoku Engine logical solver</span>
-                <span className="text-[8px] font-mono text-stone-500">C & React</span>
+                <span className="text-[9px] font-secondary font-semibold text-stone-500 tracking-wide">C & React</span>
               </div>
               <p className="text-[10px] text-stone-600 leading-relaxed font-light">
                 Exact constraint satisfaction solvers and backtracking state exploration rendering and answering unique grids in under 1.5ms.
@@ -953,7 +953,7 @@ export default function ContactView() {
             <div>
               <div className="flex justify-between border-b border-stone-100 pb-0.5 mb-1">
                 <span className="text-[10px] font-bold text-stone-900">OCR Handwriting CNN Classifier</span>
-                <span className="text-[8px] font-mono text-stone-500">PyTorch / Python</span>
+                <span className="text-[9px] font-secondary font-semibold text-stone-500 tracking-wide">PyTorch / Python</span>
               </div>
               <p className="text-[10px] text-stone-600 leading-relaxed font-light">
                 EMNIST convolutional model identifying drawn characters with graphical dashboards revealing layer activations and class vectors.
@@ -963,7 +963,7 @@ export default function ContactView() {
             <div>
               <div className="flex justify-between border-b border-stone-100 pb-0.5 mb-1">
                 <span className="text-[10px] font-bold text-stone-900">Core DSA Memory Visualizer</span>
-                <span className="text-[8px] font-mono text-stone-500">C++ / React</span>
+                <span className="text-[9px] font-secondary font-semibold text-stone-500 tracking-wide">C++ / React</span>
               </div>
               <p className="text-[10px] text-stone-600 leading-relaxed font-light">
                 Interactive simulator modeling memory allocations, pointers, stack offsets, and traversal sequences for list structures and trees.
@@ -974,7 +974,7 @@ export default function ContactView() {
 
         {/* Specialized Skills Index */}
         <div className="border-t border-stone-200 pt-3">
-          <h2 className="text-[11px] font-mono tracking-wider text-stone-850 uppercase font-black border-b border-stone-200 pb-0.5 mb-2">// CORE ENGINEERING COMPETENCY MATRIX</h2>
+          <h2 className="text-[11px] font-secondary tracking-wider text-stone-850 uppercase font-semibold border-b border-stone-200 pb-0.5 mb-2">// CORE ENGINEERING COMPETENCY MATRIX</h2>
           <div className="grid grid-cols-2 gap-4 text-[10px] text-stone-700">
             <div>
               <span className="font-bold text-stone-900 block text-[9px] uppercase tracking-wider">Programming & Databases</span>
@@ -986,7 +986,7 @@ export default function ContactView() {
             </div>
           </div>
           
-          <div className="mt-4 pt-2 border-t border-dashed border-stone-200 text-center text-[7.5px] font-mono text-stone-400">
+          <div className="mt-4 pt-2 border-t border-dashed border-stone-200 text-center text-[9px] font-secondary font-semibold text-stone-400 tracking-wide">
             Google for Startups × Antler Immersion Program Member &bull; J.G. University Candidate 2026
           </div>
         </div>

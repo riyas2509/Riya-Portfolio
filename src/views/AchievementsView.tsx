@@ -84,11 +84,11 @@ export default function AchievementsView({
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           
           {/* GOOGLE FOR STARTUPS x ANTLER */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-blue rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-amber rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-6">
               {/* Card Header */}
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
-                <span className="px-2 py-0.5 bg-brand-blue/5 border border-brand-blue/20 text-brand-blue text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-brand-amber/10 border border-brand-amber/20 text-brand-amber text-[8px] font-mono rounded font-bold uppercase tracking-wider">
                   Google for Startups &amp; Antler India
                 </span>
                 <span className="text-[9px] font-mono text-text-secondary shrink-0 flex items-center gap-1 font-medium">
@@ -98,7 +98,7 @@ export default function AchievementsView({
 
               {/* Title */}
               <div className="space-y-2">
-                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-blue transition-colors uppercase tracking-tight leading-snug">
+                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-amber transition-colors uppercase tracking-tight leading-snug">
                   Google for Startups &times; Antler Immersion Program
                 </h4>
                 <p className="text-xs text-text-secondary font-sans font-light leading-relaxed">
@@ -108,24 +108,24 @@ export default function AchievementsView({
 
               {/* What I Gained */}
               <div className="space-y-2 bg-bg-secondary border border-slate-200/60 p-5 rounded-2xl">
-                <span className="block font-mono text-[8px] text-brand-blue uppercase tracking-widest font-bold">
+                <span className="block font-mono text-[8px] text-brand-amber uppercase tracking-widest font-bold">
                   // Program Scope
                 </span>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-text-primary font-sans font-light">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-amber shrink-0" />
                     <span>Founder Journey Case Studies</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-amber shrink-0" />
                     <span>Product-Market Alignment</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-amber shrink-0" />
                     <span>User Friction Discovery</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-blue shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-amber shrink-0" />
                     <span>Modular Solution Curation</span>
                   </li>
                 </ul>
@@ -151,7 +151,7 @@ export default function AchievementsView({
 
             <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-[8px] font-mono text-text-secondary uppercase">
               <span className="flex items-center gap-1.5">
-                <Compass className="w-4 h-4 text-brand-blue" /> RECONISTRY_ID // STARTUP_IMMERSION
+                <Compass className="w-4 h-4 text-brand-amber" /> RECONISTRY_ID // STARTUP_IMMERSION
               </span>
               <span className="font-bold flex items-center gap-1 text-brand-green">
                 VERIFIED <CheckCircle2 className="w-3 h-3 text-brand-green" />
@@ -160,11 +160,11 @@ export default function AchievementsView({
           </div>
 
           {/* SCALER LAUNCHPAD VENTURE PITCH */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-green rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-green rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-6">
               {/* Card Header */}
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
-                <span className="px-2 py-0.5 bg-brand-green/5 border border-brand-green/20 text-brand-green text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-brand-green/10 border border-brand-green/20 text-brand-green text-[8px] font-mono rounded font-bold uppercase tracking-wider">
                   Scaler School of Technology
                 </span>
                 <span className="text-[9px] font-mono text-text-secondary shrink-0 flex items-center gap-1 font-medium">
@@ -254,11 +254,11 @@ export default function AchievementsView({
 
         <div className="grid grid-cols-1 gap-8">
           {/* AMA RESEARCH INTERNSHIP */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-yellow rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-lavender rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-6">
               {/* Card Header */}
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
-                <span className="px-2 py-0.5 bg-brand-yellow/5 border border-brand-yellow/20 text-brand-yellow text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-brand-lavender/10 border border-brand-lavender/20 text-brand-lavender text-[8px] font-mono rounded font-bold uppercase tracking-wider">
                   Ahmedabad Management Association (AMA)
                 </span>
                 <span className="text-[9px] font-mono text-text-secondary shrink-0 flex items-center gap-1 font-medium">
@@ -268,7 +268,7 @@ export default function AchievementsView({
 
               {/* Title */}
               <div className="space-y-2">
-                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-yellow transition-colors uppercase tracking-tight leading-snug">
+                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-lavender transition-colors uppercase tracking-tight leading-snug">
                   Industry Research Internship
                 </h4>
                 <p className="text-xs text-text-secondary font-sans font-light leading-relaxed">
@@ -278,24 +278,24 @@ export default function AchievementsView({
 
               {/* What I Gained */}
               <div className="space-y-2 bg-bg-secondary border border-slate-200/60 p-5 rounded-2xl">
-                <span className="block font-mono text-[8px] text-brand-yellow uppercase tracking-widest font-bold">
+                <span className="block font-mono text-[8px] text-brand-lavender uppercase tracking-widest font-bold">
                   // Core Engagement Scope
                 </span>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-text-primary font-sans font-light">
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-lavender shrink-0" />
                     <span>8 Capital-Intensive Sectors</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-lavender shrink-0" />
                     <span>Technological Readiness Audits</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-lavender shrink-0" />
                     <span>Mapping Value-Chain Friction</span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-yellow shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-brand-lavender shrink-0" />
                     <span>Formal Research Syntheses</span>
                   </li>
                 </ul>
@@ -321,7 +321,7 @@ export default function AchievementsView({
 
             <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-[8px] font-mono text-text-secondary uppercase">
               <span className="flex items-center gap-1.5">
-                <Briefcase className="w-4 h-4 text-brand-yellow" /> RECONISTRY_ID // AMA_MILESTONE
+                <Briefcase className="w-4 h-4 text-brand-lavender" /> RECONISTRY_ID // AMA_MILESTONE
               </span>
               <span className="font-bold flex items-center gap-1 text-brand-green">
                 VERIFIED <CheckCircle2 className="w-3 h-3 text-brand-green" />
@@ -348,7 +348,7 @@ export default function AchievementsView({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* IELTS */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-red rounded-3xl p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-yellow rounded-3xl p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-4">
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
                 <span className="px-2 py-0.5 bg-bg-secondary border border-slate-200 text-text-secondary text-[8px] font-mono rounded font-bold uppercase tracking-wider">
@@ -360,14 +360,14 @@ export default function AchievementsView({
               </div>
               
               <div className="space-y-1">
-                <h4 className="font-sans font-black text-sm md:text-base text-text-primary group-hover:text-brand-blue transition-colors uppercase tracking-tight leading-snug">
+                <h4 className="font-sans font-black text-sm md:text-base text-text-primary group-hover:text-brand-yellow transition-colors uppercase tracking-tight leading-snug">
                   IELTS Academic — Band 7.0
                 </h4>
               </div>
 
               <div className="space-y-3 bg-bg-secondary border border-slate-200/60 p-4 rounded-2xl text-xs">
                 <div>
-                  <span className="block font-mono text-[7.5px] text-brand-red uppercase tracking-wider font-bold">// Purpose</span>
+                  <span className="block font-mono text-[7.5px] text-brand-yellow uppercase tracking-wider font-bold">// Purpose</span>
                   <p className="text-text-primary font-sans font-light leading-relaxed mt-0.5">
                     Demonstrates English proficiency for academic, technical, and professional communication.
                   </p>
@@ -383,14 +383,14 @@ export default function AchievementsView({
             
             <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-[8px] font-mono text-text-secondary uppercase">
               <span className="flex items-center gap-1.5">
-                <MessageSquare className="w-4 h-4 text-brand-red" /> RECONISTRY_ID // IELTS_C1
+                <MessageSquare className="w-4 h-4 text-brand-yellow" /> RECONISTRY_ID // IELTS_C1
               </span>
               <span className="font-bold text-brand-green">APPROVED</span>
             </div>
           </div>
 
           {/* CANVA */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-blue rounded-3xl p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-coral rounded-3xl p-6 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-4">
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
                 <span className="px-2 py-0.5 bg-bg-secondary border border-slate-200 text-text-secondary text-[8px] font-mono rounded font-bold uppercase tracking-wider">
@@ -402,14 +402,14 @@ export default function AchievementsView({
               </div>
               
               <div className="space-y-1">
-                <h4 className="font-sans font-black text-sm md:text-base text-text-primary group-hover:text-brand-blue transition-colors uppercase tracking-tight leading-snug">
+                <h4 className="font-sans font-black text-sm md:text-base text-text-primary group-hover:text-brand-coral transition-colors uppercase tracking-tight leading-snug">
                   Canva Visual Suite Certification
                 </h4>
               </div>
 
               <div className="space-y-3 bg-bg-secondary border border-slate-200/60 p-4 rounded-2xl text-xs">
                 <div>
-                  <span className="block font-mono text-[7.5px] text-brand-blue uppercase tracking-wider font-bold">// Purpose</span>
+                  <span className="block font-mono text-[7.5px] text-brand-coral uppercase tracking-wider font-bold">// Purpose</span>
                   <p className="text-text-primary font-sans font-light leading-relaxed mt-0.5">
                     Demonstrates understanding of visual communication and presentation design.
                   </p>
@@ -425,7 +425,7 @@ export default function AchievementsView({
             
             <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-[8px] font-mono text-text-secondary uppercase">
               <span className="flex items-center gap-1.5">
-                <Layout className="w-4 h-4 text-brand-blue" /> RECONISTRY_ID // CANVA_VISUAL
+                <Layout className="w-4 h-4 text-brand-coral" /> RECONISTRY_ID // CANVA_VISUAL
               </span>
               <span className="font-bold text-brand-green">APPROVED</span>
             </div>
@@ -450,10 +450,10 @@ export default function AchievementsView({
 
         <div className="grid grid-cols-1 gap-6">
           {/* HACKERRANK PRACTICE PLATFORM */}
-          <div className="bg-white border border-slate-200 border-l-4 border-l-brand-green rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-sm">
+          <div className="bg-bg-card border border-slate-200/50 border-l-4 border-l-brand-blue rounded-3xl p-6 md:p-8 hover:shadow-md transition-all duration-200 flex flex-col justify-between group shadow-xs">
             <div className="space-y-6">
               <div className="flex justify-between items-start gap-2 pb-2 border-b border-slate-100">
-                <span className="px-2 py-0.5 bg-bg-secondary border border-slate-200 text-text-secondary text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+                <span className="px-2 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[8px] font-mono rounded font-bold uppercase tracking-wider">
                   HackerRank Platform
                 </span>
                 <span className="text-[9px] font-mono text-text-secondary shrink-0 flex items-center gap-1 font-medium">
@@ -462,7 +462,7 @@ export default function AchievementsView({
               </div>
 
               <div className="space-y-2">
-                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-green transition-colors uppercase tracking-tight leading-snug">
+                <h4 className="font-sans font-black text-base md:text-lg text-text-primary group-hover:text-brand-blue transition-colors uppercase tracking-tight leading-snug">
                   HackerRank Practice Platform
                 </h4>
                 <p className="text-xs text-text-secondary font-sans font-light leading-relaxed">
@@ -472,7 +472,7 @@ export default function AchievementsView({
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-2">
                 <div className="space-y-1.5 p-4 bg-bg-secondary border border-slate-200/60 rounded-2xl">
-                  <span className="block font-mono text-[8px] text-brand-green uppercase tracking-widest font-bold">// Problem Solving</span>
+                  <span className="block font-mono text-[8px] text-brand-blue uppercase tracking-widest font-bold">// Problem Solving</span>
                   <p className="text-xs text-text-secondary leading-relaxed font-sans font-light">
                     Focused on fundamental math logic, array manipulations, recursive strategies, and spatial search routines to build clean complexity habits.
                   </p>
@@ -484,7 +484,7 @@ export default function AchievementsView({
                   </p>
                 </div>
                 <div className="space-y-1.5 p-4 bg-bg-secondary border border-slate-200/60 rounded-2xl">
-                  <span className="block font-mono text-[8px] text-brand-yellow uppercase tracking-widest font-bold">// Language Proficiency</span>
+                  <span className="block font-mono text-[8px] text-brand-blue uppercase tracking-widest font-bold">// Language Proficiency</span>
                   <p className="text-xs text-text-secondary leading-relaxed font-sans font-light">
                     Active debugging and syntax practice across C++, Python, Java, and C to expand multi-paradigm agility.
                   </p>
@@ -494,10 +494,10 @@ export default function AchievementsView({
 
             <div className="pt-4 mt-6 border-t border-slate-100 flex items-center justify-between text-[8px] font-mono text-text-secondary uppercase">
               <span className="flex items-center gap-1.5">
-                <Code className="w-4 h-4 text-brand-green" /> RECONISTRY_ID // HACKERRANK_PRACTICE
+                <Code className="w-4 h-4 text-brand-blue" /> RECONISTRY_ID // HACKERRANK_PRACTICE
               </span>
-              <span className="font-bold flex items-center gap-1 text-brand-green">
-                ACTIVE <CheckCircle2 className="w-3 h-3 text-brand-green" />
+              <span className="font-bold flex items-center gap-1 text-brand-blue">
+                ACTIVE <CheckCircle2 className="w-3 h-3 text-brand-blue" />
               </span>
             </div>
           </div>

@@ -59,12 +59,12 @@ export default function SkillsView() {
       const data = payload[0].payload;
       return (
         <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 p-4 rounded-xl shadow-xl max-w-[240px] text-left space-y-1">
-          <span className="block font-mono text-[8.5px] text-text-secondary uppercase tracking-widest leading-none">PROFICIENCY METRIC</span>
+          <span className="block font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-medium leading-none">PROFICIENCY METRIC</span>
           <div className="flex justify-between items-baseline gap-4 border-b border-slate-100 dark:border-slate-700 pb-1 mb-1.5">
-            <span className="font-sans font-extrabold text-xs text-text-primary uppercase tracking-tight">{data.name}</span>
-            <span className="font-mono font-bold text-xs text-brand-blue">{data.proficiency}%</span>
+            <span className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">{data.name}</span>
+            <span className="font-secondary font-medium text-xs text-brand-blue">{data.proficiency}%</span>
           </div>
-          <p className="text-[10px] text-text-secondary leading-relaxed font-sans font-light">
+          <p className="text-[14px] text-text-secondary leading-[22px] font-sans font-normal">
             {data.description}
           </p>
         </div>
@@ -78,24 +78,24 @@ export default function SkillsView() {
       {/* HEADER SECTION */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-wider font-bold">
+          <div className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <Code className="w-3.5 h-3.5" /> COMPETENCY CORE INDEX
           </div>
-          <h2 className="text-3xl md:text-4xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h2 className="text-[28px] sm:text-[32px] font-display font-semibold tracking-[-0.01em] uppercase text-text-primary leading-[36px] sm:leading-[40px]">
             Engineering Capabilities
           </h2>
-          <p className="text-xs font-mono text-text-secondary uppercase tracking-widest">
+          <p className="text-[14px] font-secondary text-text-secondary uppercase tracking-[0.05em] font-medium">
             INTERACTIVE HEATMAPS &bull; RECHARTS ANALYZERS &bull; SYSTEM DIAGRAMS
           </p>
         </div>
 
         {/* Chart vs Heatmap toggle switch */}
-        <div className="flex items-center bg-bg-secondary border border-slate-200 p-1 rounded-xl shadow-sm text-xs font-mono font-bold">
+        <div className="flex items-center bg-bg-secondary border border-slate-200 p-1 rounded-xl shadow-sm text-xs font-sans">
           <button
             onClick={() => setViewType('chart')}
             className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 cursor-pointer transition-all ${
               viewType === 'chart' 
-                ? 'bg-white shadow-sm text-brand-blue font-extrabold' 
+                ? 'bg-white shadow-sm text-brand-blue font-semibold' 
                 : 'text-text-secondary hover:text-text-primary'
             }`}
           >
@@ -105,7 +105,7 @@ export default function SkillsView() {
             onClick={() => setViewType('heatmap')}
             className={`px-3 py-1.5 rounded-lg flex items-center gap-1.5 cursor-pointer transition-all ${
               viewType === 'heatmap' 
-                ? 'bg-white shadow-sm text-brand-blue font-extrabold' 
+                ? 'bg-white shadow-sm text-brand-blue font-semibold' 
                 : 'text-text-secondary hover:text-text-primary'
             }`}
           >
@@ -119,7 +119,7 @@ export default function SkillsView() {
         
         {/* Left Side: Category Controller Selection Grid */}
         <div className="lg:col-span-4 space-y-4">
-          <span className="block font-mono text-[8px] text-text-secondary uppercase tracking-widest font-black">// FILTER SECTOR PARAMETER</span>
+          <span className="block font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-medium">// FILTER SECTOR PARAMETER</span>
           <div className="flex flex-col gap-2">
             {CATEGORIES.map((cat) => {
               const Icon = cat.icon;
@@ -127,9 +127,9 @@ export default function SkillsView() {
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`w-full text-left py-3.5 px-4 rounded-2xl font-mono text-xs uppercase tracking-wider transition-all flex items-center justify-between border ${
+                  className={`w-full text-left py-3.5 px-4 rounded-2xl font-sans text-[15px] font-medium tracking-normal transition-all flex items-center justify-between border ${
                     activeCategory === cat.id
-                      ? 'bg-white border-brand-blue text-brand-blue font-extrabold shadow-sm translate-x-1 border-l-4 border-l-brand-blue'
+                      ? 'bg-white border-brand-blue text-brand-blue font-semibold shadow-sm translate-x-1 border-l-4 border-l-brand-blue'
                       : 'bg-white hover:bg-slate-50 border-slate-200 text-text-secondary hover:text-text-primary hover:border-slate-300'
                   }`}
                   style={{ minHeight: '44px' }}
@@ -138,7 +138,7 @@ export default function SkillsView() {
                     <Icon className={`w-4 h-4 ${activeCategory === cat.id ? 'text-brand-blue' : 'text-slate-400'}`} />
                     {cat.label}
                   </span>
-                  <span className="text-[9px] font-mono opacity-50">
+                  <span className="text-xs font-secondary opacity-50">
                     {SKILLS_DATA.filter(s => s.category === cat.id).length} units
                   </span>
                 </button>
@@ -148,29 +148,29 @@ export default function SkillsView() {
 
           {/* Interactive detail card showing context info */}
           <div className="bg-bg-secondary border border-slate-200 rounded-3xl p-5 space-y-4 shadow-sm">
-            <div className="flex items-center gap-2 text-xs font-mono text-text-primary font-bold uppercase pb-2 border-b border-slate-200">
+            <div className="flex items-center gap-2 text-xs font-secondary text-text-primary font-medium uppercase pb-2 border-b border-slate-200">
               <Info className="w-4 h-4 text-brand-blue" /> Focused Competency Node
             </div>
             
             {hoveredSkill || filteredSkills[0] ? (
               <div className="space-y-2 text-left">
                 <div className="flex justify-between items-baseline">
-                  <h4 className="font-sans font-black text-sm text-text-primary uppercase tracking-tight">
+                  <h4 className="font-sans font-semibold text-[20px] text-text-primary uppercase tracking-tight">
                     {hoveredSkill?.name || filteredSkills[0].name}
                   </h4>
-                  <span className="font-mono font-bold text-xs text-brand-blue">
+                  <span className="font-secondary font-medium text-sm text-brand-blue">
                     {hoveredSkill?.proficiency || filteredSkills[0].proficiency}% Proficient
                   </span>
                 </div>
-                <p className="text-[11px] text-text-secondary leading-relaxed font-sans font-light">
+                <p className="text-[14px] text-text-secondary leading-[22px] font-sans font-normal">
                   {hoveredSkill?.description || filteredSkills[0].description}
                 </p>
-                <div className="inline-flex items-center gap-1.5 px-2 py-1 bg-bg-secondary border border-slate-200 text-[8px] font-mono text-brand-green uppercase rounded-md shadow-xs">
+                <div className="inline-flex items-center gap-1.5 px-2 py-1 bg-bg-secondary border border-slate-200 text-xs font-secondary text-brand-green uppercase rounded-md shadow-xs font-medium">
                   <CheckCircle2 className="w-3 h-3" /> System Validated Node
                 </div>
               </div>
             ) : (
-              <p className="text-[11px] text-text-secondary font-sans font-light">
+              <p className="text-[14px] text-text-secondary leading-[22px] font-sans font-normal">
                 Hover or select a skill token on the right to examine exact pipeline descriptions and validation indicators.
               </p>
             )}
@@ -184,18 +184,18 @@ export default function SkillsView() {
             <div className="space-y-6 flex-grow flex flex-col justify-between h-full">
               <div className="flex justify-between items-center border-b border-slate-100 pb-3">
                 <div className="space-y-0.5 text-left">
-                  <span className="block font-mono text-[8px] text-brand-blue uppercase font-bold tracking-widest">// RECHARTS MULTI-VECTOR ANALYZER</span>
-                  <h3 className="font-sans font-bold text-sm text-text-primary uppercase tracking-tight">
+                  <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// RECHARTS MULTI-VECTOR ANALYZER</span>
+                  <h3 className="font-sans font-semibold text-[18px] text-text-primary uppercase tracking-tight">
                     {activeCategory} Proficiency Vector
                   </h3>
                 </div>
-                <span className="px-2 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[8px] font-mono rounded uppercase font-bold tracking-wider">
+                <span className="px-2 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-xs font-secondary rounded uppercase font-medium tracking-[0.05em]">
                   SCALE %
                 </span>
               </div>
 
               {/* Responsive chart frame */}
-              <div className="w-full h-[320px] relative mt-2 text-xs flex-grow font-mono">
+              <div className="w-full h-[320px] relative mt-2 text-xs flex-grow font-secondary">
                 <ResponsiveContainer width="100%" height="100%">
                   <BarChart
                     data={filteredSkills}
@@ -249,7 +249,7 @@ export default function SkillsView() {
                 </ResponsiveContainer>
               </div>
 
-              <div className="text-[10px] text-text-secondary text-left font-mono uppercase bg-slate-50 dark:bg-slate-800/40 p-3 rounded-2xl flex items-center justify-between pointer-events-none select-none">
+              <div className="text-xs text-text-secondary text-left font-secondary uppercase bg-slate-50 dark:bg-slate-800/40 p-3 rounded-2xl flex items-center justify-between pointer-events-none select-none">
                 <span>⚡ Tip: Hover over the actual bars to fetch context statements.</span>
                 <span>Sorted descending</span>
               </div>
@@ -258,12 +258,12 @@ export default function SkillsView() {
             <div className="space-y-6 flex-grow flex flex-col justify-between">
               <div className="flex justify-between items-center border-b border-slate-100 pb-3">
                 <div className="space-y-0.5 text-left">
-                  <span className="block font-mono text-[8px] text-brand-green uppercase font-bold tracking-widest">// ALL-COMPETENCY GRADIENT HEATMAP</span>
-                  <h3 className="font-sans font-bold text-sm text-text-primary uppercase tracking-tight">
+                  <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// ALL-COMPETENCY GRADIENT HEATMAP</span>
+                  <h3 className="font-sans font-semibold text-[18px] text-text-primary uppercase tracking-tight">
                     Multi-Dimensional Skills Map
                   </h3>
                 </div>
-                <span className="text-[8px] font-mono text-text-secondary leading-none">
+                <span className="text-xs font-secondary text-text-secondary leading-none">
                   25 TOTAL ACTIVE NODES
                 </span>
               </div>
@@ -282,22 +282,22 @@ export default function SkillsView() {
                     className={`p-3 border rounded-2xl cursor-pointer text-left transition-all duration-200 flex flex-col justify-between h-20 ${getHeatmapColorClass(skill.proficiency, skill.category)}`}
                   >
                     <div className="flex justify-between items-start gap-1">
-                      <span className="font-sans font-black text-[11px] leading-tight tracking-tight uppercase truncate">
+                      <span className="font-sans font-semibold text-sm leading-tight tracking-tight uppercase truncate">
                         {skill.name}
                       </span>
-                      <span className="font-mono text-[8.5px] font-bold shrink-0 opacity-80 bg-black/5 dark:bg-white/5 py-0.5 px-1 rounded-sm leading-none">
+                      <span className="font-secondary text-xs font-medium shrink-0 opacity-80 bg-black/5 dark:bg-white/5 py-0.5 px-1 rounded-sm leading-none">
                         {skill.proficiency}%
                       </span>
                     </div>
 
-                    <span className="block font-mono text-[7px] uppercase tracking-wider opacity-70 leading-none">
+                    <span className="block font-secondary text-[11px] uppercase tracking-[0.05em] opacity-70 leading-none">
                       {skill.category}
                     </span>
                   </div>
                 ))}
               </div>
 
-              <div className="text-[10px] text-text-secondary text-left font-mono uppercase bg-slate-50 dark:bg-slate-800/40 p-3 rounded-2xl flex items-center justify-between select-none">
+              <div className="text-xs text-text-secondary text-left font-secondary uppercase bg-slate-50 dark:bg-slate-800/40 p-3 rounded-2xl flex items-center justify-between select-none">
                 <span className="truncate">🔥 Grid weight reflects localized scale proficiency levels.</span>
                 <span className="shrink-0 font-bold text-brand-blue">Click cell to focus</span>
               </div>
@@ -309,31 +309,31 @@ export default function SkillsView() {
 
       {/* CORE SPECIFICATIONS WORKSPACE BAR */}
       <div className="bg-bg-secondary border border-slate-200 rounded-3xl p-6 md:p-8 space-y-6 shadow-md border-t-2 border-t-brand-green">
-        <h3 className="font-sans font-extrabold text-sm text-text-primary uppercase tracking-tight">
-          Theoretical & Analytical Standards
+        <h3 className="font-sans font-semibold text-[20px] text-text-primary uppercase tracking-tight">
+          Theoretical &amp; Analytical Standards
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="space-y-2 text-left">
-            <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-widest font-bold">Standard 01</span>
-            <h4 className="text-text-primary text-xs font-mono uppercase tracking-tight font-bold">Systems Flow Auditing</h4>
-            <p className="text-[11px] text-text-secondary font-light font-sans leading-relaxed">
+            <span className="block font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-medium">Standard 01</span>
+            <h4 className="font-sans text-[16px] font-semibold text-text-primary uppercase tracking-tight">Systems Flow Auditing</h4>
+            <p className="font-sans text-[14px] text-text-secondary font-normal leading-[22px]">
               Conducting logical audits on corporate files using custom prompts and isolated context files, bypassing manual layout bottlenecks.
             </p>
           </div>
 
           <div className="space-y-2 text-left">
-            <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-widest font-bold">Standard 02</span>
-            <h4 className="text-text-primary text-xs font-mono uppercase tracking-tight font-bold">EMNIST Optimization</h4>
-            <p className="text-[11px] text-text-secondary font-light font-sans leading-relaxed">
+            <span className="block font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-medium">Standard 02</span>
+            <h4 className="font-sans text-[16px] font-semibold text-text-primary uppercase tracking-tight">EMNIST Optimization</h4>
+            <p className="font-sans text-[14px] text-text-secondary font-normal leading-[22px]">
               Normalizing written inputs using spatial warping matrices as feed-forwards for convolutional node classification structures.
             </p>
           </div>
 
           <div className="space-y-2 text-left">
-            <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-widest font-bold">Standard 03</span>
-            <h4 className="text-text-primary text-xs font-mono uppercase tracking-tight font-bold">Constraint Parsing</h4>
-            <p className="text-[11px] text-text-secondary font-light font-sans leading-relaxed">
+            <span className="block font-secondary text-xs text-text-secondary uppercase tracking-[0.05em] font-medium">Standard 03</span>
+            <h4 className="font-sans text-[16px] font-semibold text-text-primary uppercase tracking-tight">Constraint Parsing</h4>
+            <p className="font-sans text-[14px] text-text-secondary font-normal leading-[22px]">
               Deploying exact constraint satisfaction mechanics to track state parameters without causing infinite recursive overhead.
             </p>
           </div>

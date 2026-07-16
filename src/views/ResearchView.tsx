@@ -31,14 +31,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
   // Map industry name to visual icons or color schemes for variety & visual premium design
   const getBrandColors = (index: number) => {
     const schemes = [
-      { border: 'hover:border-brand-blue border-l-brand-blue', text: 'text-brand-blue', bg: 'bg-brand-blue/5' },
-      { border: 'hover:border-brand-green border-l-brand-green', text: 'text-brand-green', bg: 'bg-brand-green/5' },
-      { border: 'hover:border-brand-yellow border-l-brand-yellow', text: 'text-brand-yellow', bg: 'bg-brand-yellow/5' },
-      { border: 'hover:border-brand-red border-l-brand-red', text: 'text-brand-red', bg: 'bg-brand-red/5' },
-      { border: 'hover:border-brand-blue border-l-brand-blue', text: 'text-brand-blue', bg: 'bg-brand-blue/5' },
-      { border: 'hover:border-brand-green border-l-brand-green', text: 'text-brand-green', bg: 'bg-brand-green/5' },
-      { border: 'hover:border-brand-yellow border-l-brand-yellow', text: 'text-brand-yellow', bg: 'bg-brand-yellow/5' },
-      { border: 'hover:border-brand-red border-l-brand-red', text: 'text-brand-red', bg: 'bg-brand-red/5' }
+      { border: 'hover:border-brand-blue border-l-brand-blue', text: 'text-brand-blue', bg: 'bg-brand-blue/10' },
+      { border: 'hover:border-brand-violet border-l-brand-violet', text: 'text-brand-violet', bg: 'bg-brand-violet/10' },
+      { border: 'hover:border-brand-lavender border-l-brand-lavender', text: 'text-brand-lavender', bg: 'bg-brand-lavender/10' },
+      { border: 'hover:border-brand-coral border-l-brand-coral', text: 'text-brand-coral', bg: 'bg-brand-coral/10' },
+      { border: 'hover:border-brand-green border-l-brand-green', text: 'text-brand-green', bg: 'bg-brand-green/10' },
+      { border: 'hover:border-brand-yellow border-l-brand-yellow', text: 'text-brand-yellow', bg: 'bg-brand-yellow/10' },
+      { border: 'hover:border-brand-amber border-l-brand-amber', text: 'text-brand-amber', bg: 'bg-brand-amber/10' }
     ];
     return schemes[index % schemes.length];
   };
@@ -47,13 +46,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
     <div className="space-y-16 py-4">
       {/* HEADER SECTION */}
       <div className="space-y-3">
-        <div className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-widest font-bold">
+        <div className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
           <Compass className="w-3.5 h-3.5 text-brand-blue" /> AI WORKFLOWS RESEARCH LAB
         </div>
-        <h2 className="text-3xl md:text-4xl font-sans font-black uppercase text-text-primary tracking-tight">
+        <h2 className="text-[28px] sm:text-[36px] font-display font-semibold tracking-[-0.01em] uppercase text-text-primary leading-[34px] sm:leading-[42px]">
           Sector Value Chains &amp; AI Interventions
         </h2>
-        <p className="text-xs font-mono text-text-secondary uppercase tracking-widest leading-relaxed">
+        <p className="text-xs font-secondary text-text-secondary uppercase tracking-[0.05em] font-medium leading-relaxed">
           AMBASSADOR STUDIES &bull; AHMEDABAD MANAGEMENT ASSOCIATION (AMA) INTEL REPORTS &bull; SYSTEMATIC SECTORAL AUDITS
         </p>
       </div>
@@ -62,32 +61,32 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Research Philosophy */}
         <div className="bg-bg-secondary border border-slate-200 rounded-3xl p-6 md:p-8 space-y-4 shadow-xs">
-          <div className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-wider font-bold">
+          <div className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <Compass className="w-3.5 h-3.5" /> FOUNDATIONAL FOCUS
           </div>
-          <h3 className="text-xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-[20px] font-sans font-semibold uppercase text-text-primary tracking-tight">
             Research Philosophy
           </h3>
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-light">
+          <p className="font-sans text-[14px] text-text-secondary leading-[22px]">
             My approach is grounded in the belief that AI solutions can only be effective if we thoroughly understand the industries they are meant to serve. Rather than proposing generic algorithm applications, I focus on analyzing real-world workflows, core business processes, operational bottlenecks, and detailed value chains before proposing technical implementations.
           </p>
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-light">
+          <p className="font-sans text-[14px] text-text-secondary leading-[22px]">
             By analyzing where friction actually occurs in day-to-day operations, we can design practical, reliable software systems that target genuine issues, ensuring that technology serves a clear operational purpose.
           </p>
         </div>
 
         {/* Why This Research */}
         <div className="bg-bg-secondary border border-slate-200 rounded-3xl p-6 md:p-8 space-y-4 shadow-xs border-t-4 border-t-brand-green">
-          <div className="inline-flex items-center gap-1.5 text-brand-green font-mono text-[9px] uppercase tracking-wider font-bold">
+          <div className="inline-flex items-center gap-1.5 text-brand-green font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <FileText className="w-3.5 h-3.5" /> PROFESSIONAL CONTEXT
           </div>
-          <h3 className="text-xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-[20px] font-sans font-semibold uppercase text-text-primary tracking-tight">
             Why This Research?
           </h3>
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-light">
+          <p className="font-sans text-[14px] text-text-secondary leading-[22px]">
             This research was conducted during an Industry Research Internship at the <strong>Ahmedabad Management Association (AMA)</strong>. The primary objective was to perform structured operational audits to evaluate the feasibility of AI adoption across capital-intensive fields.
           </p>
-          <p className="text-xs sm:text-sm text-text-secondary leading-relaxed font-light">
+          <p className="font-sans text-[14px] text-text-secondary leading-[22px]">
             This opportunity served as a structured learning experience with real-world business exposure. By looking beyond abstract academic concepts, I was able to examine how supply chains, chemical distillation towers, and heavy transport terminals actually operate in a professional context.
           </p>
         </div>
@@ -96,63 +95,63 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* SECTION 4 & 5: DASHBOARD & PRINCIPLES */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Research Dashboard */}
-        <div className="lg:col-span-5 bg-white border border-slate-200 p-6 md:p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-xs">
+        <div className="lg:col-span-5 bg-bg-card border border-slate-200/50 p-6 md:p-8 rounded-3xl flex flex-col justify-between space-y-6 shadow-xs">
           <div className="space-y-1">
-            <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// METRIC OVERVIEW</span>
-            <h4 className="text-sm font-sans font-black uppercase text-text-primary tracking-tight">Research Dashboard</h4>
-            <p className="text-[11px] text-text-secondary font-light">Verified parameters from the AMA research term.</p>
+            <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// METRIC OVERVIEW</span>
+            <h4 className="text-[18px] font-sans font-semibold uppercase text-text-primary tracking-tight">Research Dashboard</h4>
+            <p className="text-xs text-text-secondary font-sans leading-relaxed">Verified parameters from the AMA research term.</p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-bg-secondary border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-              <span className="block font-sans text-3xl font-black text-brand-blue">8</span>
-              <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-wider font-bold">Industries Researched</span>
+              <span className="block font-sans text-3xl font-extrabold text-brand-blue">8</span>
+              <span className="block font-secondary text-[11px] text-text-secondary uppercase tracking-[0.05em] font-semibold">Industries Researched</span>
+            </div>
+            <div className="bg-bg-secondary border border-slate-100 p-4 rounded-2xl text-center space-y-1 flex flex-col justify-center items-center">
+              <span className="block font-sans text-[20px] font-extrabold text-brand-green leading-[36px]">AMA</span>
+              <span className="block font-secondary text-[11px] text-text-secondary uppercase tracking-[0.05em] font-semibold">Internship Context</span>
             </div>
             <div className="bg-bg-secondary border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-              <span className="block font-sans text-base font-black text-brand-green leading-9">AMA</span>
-              <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-wider font-bold font-mono">Internship Context</span>
+              <span className="block font-sans text-3xl font-extrabold text-brand-yellow">8</span>
+              <span className="block font-secondary text-[11px] text-text-secondary uppercase tracking-[0.05em] font-semibold">Value Chains Analysed</span>
             </div>
             <div className="bg-bg-secondary border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-              <span className="block font-sans text-3xl font-black text-brand-yellow">8</span>
-              <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-wider font-bold">Value Chains Analysed</span>
-            </div>
-            <div className="bg-bg-secondary border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-              <span className="block font-sans text-3xl font-black text-brand-red">8</span>
-              <span className="block font-mono text-[9px] text-text-secondary uppercase tracking-wider font-bold">Strategic Reports</span>
+              <span className="block font-sans text-3xl font-extrabold text-brand-red">8</span>
+              <span className="block font-secondary text-[11px] text-text-secondary uppercase tracking-[0.05em] font-semibold">Strategic Reports</span>
             </div>
           </div>
         </div>
 
         {/* Research Principles */}
-        <div className="lg:col-span-7 bg-white border border-slate-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-xs">
+        <div className="lg:col-span-7 bg-bg-card border border-slate-200/50 p-6 md:p-8 rounded-3xl space-y-6 shadow-xs">
           <div className="space-y-1">
-            <span className="block font-mono text-[9px] text-brand-green uppercase font-bold tracking-widest">// OPERATIONAL GUIDELINES</span>
-            <h4 className="text-sm font-sans font-black uppercase text-text-primary tracking-tight">Research Principles</h4>
-            <p className="text-[11px] text-text-secondary font-light">Fundamental guidelines directing my analytical workflow.</p>
+            <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// OPERATIONAL GUIDELINES</span>
+            <h4 className="text-[18px] font-sans font-semibold uppercase text-text-primary tracking-tight">Research Principles</h4>
+            <p className="text-xs text-text-secondary font-sans leading-relaxed">Fundamental guidelines directing my analytical workflow.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="space-y-1.5 border-l-2 border-brand-blue/30 pl-3">
-              <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">Understand Before Recommending</h5>
-              <p className="text-[11px] text-text-secondary leading-relaxed font-light">
+              <h5 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Understand Before Recommending</h5>
+              <p className="font-sans text-xs text-text-secondary leading-relaxed">
                 Map the detailed steps of an industry workflow and supply chain before proposing any AI interventions.
               </p>
             </div>
             <div className="space-y-1.5 border-l-2 border-brand-green/30 pl-3">
-              <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">Research Before Automating</h5>
-              <p className="text-[11px] text-text-secondary leading-relaxed font-light">
+              <h5 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Research Before Automating</h5>
+              <p className="font-sans text-xs text-text-secondary leading-relaxed">
                 Analyze operational details and failure logs to find the exact mechanical bottlenecks first.
               </p>
             </div>
             <div className="space-y-1.5 border-l-2 border-brand-yellow/30 pl-3">
-              <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">Focus on Practical AI Adoption</h5>
-              <p className="text-[11px] text-text-secondary leading-relaxed font-light">
+              <h5 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Focus on Practical AI Adoption</h5>
+              <p className="font-sans text-xs text-text-secondary leading-relaxed">
                 Prioritize low-risk, high-impact features over trendy but unreliable integrations.
               </p>
             </div>
             <div className="space-y-1.5 border-l-2 border-brand-red/30 pl-3">
-              <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">Value Before Technology</h5>
-              <p className="text-[11px] text-text-secondary leading-relaxed font-light">
+              <h5 className="font-sans font-semibold text-sm text-text-primary uppercase tracking-tight">Value Before Technology</h5>
+              <p className="font-sans text-xs text-text-secondary leading-relaxed">
                 Ensure every technical recommendation directly maps to real business metrics and efficiency gains.
               </p>
             </div>
@@ -163,13 +162,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* SECTION 2: RESEARCH FRAMEWORK */}
       <section className="space-y-8 pt-4 border-t border-slate-200" id="research-framework-section">
         <div className="space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-widest font-bold">
+          <span className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <Compass className="w-3.5 h-3.5 text-brand-blue" /> Systematic Process
           </span>
-          <h3 className="text-2xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-2xl font-sans font-semibold uppercase text-text-primary tracking-tight">
             Research Framework
           </h3>
-          <p className="text-sm text-text-secondary font-sans font-light max-w-4xl leading-relaxed">
+          <p className="font-sans text-[14px] text-text-secondary max-w-4xl leading-[22px]">
             A structured approach I followed during the internship to analyse industries, identify operational challenges, and evaluate practical AI opportunities. Rather than presenting this as a proprietary methodology, this process represents a standard framework used to audit and evaluate technology readiness.
           </p>
         </div>
@@ -207,10 +206,10 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   {step.num}
                 </span>
                 <div className="space-y-1">
-                  <h4 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">
                     {step.title}
                   </h4>
-                  <p className="text-[10px] text-text-secondary line-clamp-1 font-light font-sans">
+                  <p className="text-[10px] text-text-secondary line-clamp-1 font-sans">
                     {step.short}
                   </p>
                 </div>
@@ -235,8 +234,8 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                 </div>
 
                 <div className="space-y-2 border-b border-slate-100 pb-4">
-                  <span className="font-mono text-[8px] text-brand-blue uppercase font-bold tracking-widest">// STEP DETAILS</span>
-                  <h4 className="text-lg font-sans font-black uppercase text-text-primary tracking-tight">
+                  <span className="font-secondary text-[11px] text-brand-blue uppercase font-semibold tracking-[0.05em]">// STEP DETAILS</span>
+                  <h4 className="text-[18px] font-sans font-semibold uppercase text-text-primary tracking-tight">
                     {[
                       'Industry Understanding',
                       'Market & Industry Overview',
@@ -249,7 +248,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                       'Strategic Recommendations'
                     ][activeStep]}
                   </h4>
-                  <p className="text-xs text-text-secondary leading-relaxed font-sans font-light">
+                  <p className="font-sans text-[14px] text-text-secondary leading-[22px]">
                     {[
                       'Establishing deep domain literacy to navigate industrial terminology and sector-specific operational rules.',
                       'Reviewing macroeconomic factors, industrial sizing metrics, and baseline compliance laws defining the landscape.',
@@ -267,10 +266,10 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                 {/* Purpose & Expected Output Columns */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
                   <div className="space-y-2 p-4 bg-slate-50 border border-slate-150 rounded-2xl">
-                    <span className="font-mono text-[8px] text-brand-blue uppercase font-bold tracking-widest block flex items-center gap-1.5">
+                    <span className="font-secondary text-[11px] text-brand-blue uppercase font-semibold tracking-[0.05em] block flex items-center gap-1.5">
                       <Target className="w-3.5 h-3.5" /> Stage Purpose
                     </span>
-                    <p className="text-[11px] text-text-primary leading-relaxed font-sans font-medium">
+                    <p className="text-xs text-text-primary leading-relaxed font-sans font-semibold">
                       {[
                         'To align research objectives with the unique standard operating procedures and technical lexicons of the industry.',
                         'To contextualize physical operations within broad market realities and regional compliance regulations.',
@@ -286,10 +285,10 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   </div>
 
                   <div className="space-y-2 p-4 bg-emerald-50/20 border border-emerald-100 rounded-2xl">
-                    <span className="font-mono text-[8px] text-brand-green uppercase font-bold tracking-widest block flex items-center gap-1.5">
+                    <span className="font-secondary text-[11px] text-brand-green uppercase font-semibold tracking-[0.05em] block flex items-center gap-1.5">
                       <CheckCircle2 className="w-3.5 h-3.5 text-brand-green" /> Expected Output
                     </span>
-                    <p className="text-[11px] text-text-secondary leading-relaxed font-sans font-light">
+                    <p className="text-xs text-text-secondary leading-relaxed font-sans">
                       {[
                         'Standardized sector briefing paper with domain terms glossary.',
                         'Industrial positioning report and regulatory compliance summary.',
@@ -312,9 +311,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
         {/* Sub-framework learnings (What This Framework Helped Me Understand) */}
         <div className="space-y-4 pt-4">
           <div className="space-y-1">
-            <span className="block font-mono text-[9px] text-brand-green uppercase font-bold tracking-widest">// CRITICAL ANALYTICAL LEARNINGS</span>
-            <h4 className="text-sm font-sans font-black text-text-primary uppercase tracking-tight">What This Framework Helped Me Understand</h4>
-            <p className="text-[11px] text-text-secondary font-sans font-light">
+            <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// CRITICAL ANALYTICAL LEARNINGS</span>
+            <h4 className="text-[18px] font-sans font-semibold text-text-primary uppercase tracking-tight">What This Framework Helped Me Understand</h4>
+            <p className="text-xs text-text-secondary font-sans">
               Following this structured process allowed me to systematically diagnose the operational health of capital-intensive industries.
             </p>
           </div>
@@ -369,16 +368,16 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       <div className="bg-bg-secondary border border-slate-200 p-6 md:p-8 rounded-3xl relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-6 shadow-xs border-l-4 border-l-brand-blue">
         <div className="absolute top-0 right-0 w-44 h-44 bg-brand-blue/5 rounded-full blur-[60px] pointer-events-none" />
         <div className="space-y-1 text-center md:text-left">
-          <h4 className="font-sans font-black text-sm uppercase text-text-primary tracking-tight">
+          <h4 className="font-sans font-semibold text-[16px] uppercase text-text-primary tracking-tight">
             Apply Research Framework in Action
           </h4>
-          <p className="text-[11px] font-sans text-text-secondary font-light">
+          <p className="font-sans text-xs text-text-secondary">
             The following industries illustrate how this diagnostic framework was applied across different business domains.
           </p>
         </div>
         <a 
           href="#industry-explorer-section" 
-          className="px-5 py-2.5 bg-white hover:bg-slate-50 border border-slate-200 hover:border-brand-blue text-text-primary font-mono text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all duration-200 shadow-xs whitespace-nowrap"
+          className="px-5 py-2.5 bg-white hover:bg-slate-50 border border-slate-200 hover:border-brand-blue text-text-primary font-secondary text-xs font-semibold uppercase tracking-[0.05em] rounded-xl transition-all duration-200 shadow-xs whitespace-nowrap"
         >
           Explore Industries Below ↓
         </a>
@@ -387,13 +386,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* CORE INTEGRATION: LIVE INTERACTIVE OPPORTUNITY MAPPING BUBBLE CHART */}
       <section className="space-y-6">
         <div className="space-y-2">
-          <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">
+          <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">
             // INTERACTIVE ANALYTICS SUITE
           </span>
-          <h3 className="text-2xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-2xl font-sans font-semibold uppercase text-text-primary tracking-tight">
             Comprehensive Industry Diagnostics Matrix
           </h3>
-          <p className="text-xs text-text-secondary font-sans font-light leading-relaxed">
+          <p className="font-sans text-xs text-text-secondary leading-relaxed">
             Discover processed datasets detailing exact workflow steps, structural risks, system prompt templates, and strategic commercial impact estimations across all 8 sector models.
           </p>
         </div>
@@ -408,13 +407,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       <section id="industry-explorer-section" className="space-y-8 pt-6">
         {/* Title and Short Introduction */}
         <div className="space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-brand-green font-mono text-[9px] uppercase tracking-widest font-bold">
+          <span className="inline-flex items-center gap-1.5 text-brand-green font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <Layers className="w-4 h-4 text-brand-green" /> Structured Case Intelligence
           </span>
-          <h3 className="text-2xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-2xl font-sans font-semibold uppercase text-text-primary tracking-tight">
             Industry Explorer
           </h3>
-          <p className="text-sm text-text-secondary font-sans font-light max-w-4xl leading-relaxed">
+          <p className="font-sans text-[14px] text-text-secondary max-w-4xl leading-[22px]">
             During my internship at Ahmedabad Management Association (AMA), I analyzed multiple industries to understand their value chains, operational challenges, AI adoption opportunities, and technology readiness.
           </p>
         </div>
@@ -439,11 +438,11 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                 <div className="space-y-3">
                   {/* Industry Name */}
                   <div className="flex justify-between items-start gap-2">
-                    <h4 className="text-text-primary text-sm font-sans font-black uppercase tracking-tight leading-snug group-hover:text-brand-blue transition-colors">
+                    <h4 className="text-text-primary text-[15px] font-sans font-semibold uppercase tracking-tight leading-snug group-hover:text-brand-blue transition-colors">
                       {item.sector}
                     </h4>
                     {isActive && (
-                      <span className="px-1.5 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[7px] font-mono rounded font-bold uppercase tracking-wider shrink-0">
+                      <span className="px-1.5 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[9px] font-secondary rounded font-bold uppercase tracking-[0.05em] shrink-0">
                         ACTIVE
                       </span>
                     )}
@@ -454,7 +453,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                     {item.tags.map((tag, tIdx) => (
                       <span 
                         key={tIdx} 
-                        className="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[8px] font-mono rounded"
+                        className="px-1.5 py-0.5 bg-slate-100 text-slate-600 text-[10px] font-secondary font-medium rounded uppercase tracking-wider"
                       >
                         {tag}
                       </span>
@@ -462,14 +461,14 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   </div>
 
                   {/* One-line Description */}
-                  <p className="text-[11px] text-text-secondary leading-normal font-sans font-light line-clamp-2">
+                  <p className="font-sans text-xs text-text-secondary leading-normal line-clamp-2">
                     {item.description}
                   </p>
 
                   {/* Writing Style: Industry -> Challenge -> Research Focus -> AI Opportunities -> Key Learning */}
-                  <div className="space-y-2 pt-2 border-t border-slate-100 text-[10px] leading-relaxed">
+                  <div className="space-y-2 pt-2 border-t border-slate-100 text-xs leading-relaxed">
                     <div>
-                      <span className="text-[8px] font-mono text-brand-red uppercase font-semibold block tracking-wider">
+                      <span className="text-[10px] font-secondary text-brand-red uppercase font-semibold block tracking-[0.05em]">
                         Challenge
                       </span>
                       <p className="text-text-primary font-sans font-normal line-clamp-1">
@@ -478,7 +477,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                     </div>
 
                     <div>
-                      <span className="text-[8px] font-mono text-brand-blue uppercase font-semibold block tracking-wider">
+                      <span className="text-[10px] font-secondary text-brand-blue uppercase font-semibold block tracking-[0.05em]">
                         Research Focus
                       </span>
                       <p className="text-text-primary font-sans font-normal line-clamp-1">
@@ -487,14 +486,14 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                     </div>
 
                     <div>
-                      <span className="text-[8px] font-mono text-brand-green uppercase font-semibold block tracking-wider">
+                      <span className="text-[10px] font-secondary text-brand-green uppercase font-semibold block tracking-[0.05em]">
                         AI Opportunity Analysis
                       </span>
                       <div className="flex flex-wrap gap-1 mt-0.5">
                         {item.aiOpportunities.slice(0, 2).map((opp, oIdx) => (
                           <span 
                             key={oIdx} 
-                            className="px-1 bg-brand-green/10 text-brand-green text-[8px] font-mono rounded font-bold"
+                            className="px-1.5 py-0.5 bg-brand-green/10 text-brand-green text-[10px] font-secondary rounded font-semibold uppercase tracking-wider"
                           >
                             {opp}
                           </span>
@@ -503,10 +502,10 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                     </div>
 
                     <div>
-                      <span className="text-[8px] font-mono text-brand-yellow uppercase font-semibold block tracking-wider">
+                      <span className="text-[10px] font-secondary text-brand-yellow uppercase font-semibold block tracking-[0.05em]">
                         Key Learning
                       </span>
-                      <p className="text-text-secondary font-sans font-light line-clamp-1">
+                      <p className="text-text-secondary font-sans font-normal line-clamp-1">
                         {item.keyLearning}
                       </p>
                     </div>
@@ -525,7 +524,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                         element.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className={`w-full py-1.5 px-3 rounded-xl font-mono text-[9px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition-all ${
+                    className={`w-full py-2 px-3 rounded-xl font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] flex items-center justify-center gap-1.5 transition-all cursor-pointer ${
                       isActive 
                         ? 'bg-brand-blue text-white shadow-xs' 
                         : 'bg-slate-50 border border-slate-200 text-text-primary hover:bg-slate-100'
@@ -856,13 +855,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="w-full sm:w-auto px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-text-primary hover:border-brand-blue font-mono text-[9px] font-bold uppercase tracking-widest rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
+                  className="w-full sm:w-auto px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-text-primary hover:border-brand-blue font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
                 >
                   <ArrowLeft className="w-3.5 h-3.5" />
                   <span>Previous Industry ←</span>
                 </button>
 
-                <span className="text-[9px] font-mono text-text-secondary uppercase tracking-wider">
+                <span className="text-xs font-secondary text-text-secondary uppercase tracking-[0.05em] font-medium">
                   Audited Sector {selectedIdx + 1} of {CASES_DATA.length}
                 </span>
 
@@ -876,7 +875,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                       element.scrollIntoView({ behavior: 'smooth' });
                     }
                   }}
-                  className="w-full sm:w-auto px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-text-primary hover:border-brand-blue font-mono text-[9px] font-bold uppercase tracking-widest rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
+                  className="w-full sm:w-auto px-4 py-2 bg-white hover:bg-slate-50 border border-slate-200 text-text-primary hover:border-brand-blue font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all duration-200 flex items-center justify-center gap-1.5 shadow-xs cursor-pointer"
                 >
                   <span>Next Industry →</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -892,13 +891,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* SECTION 1 - CROSS-INDUSTRY INSIGHTS */}
       <section className="space-y-8 pt-8 border-t border-slate-200">
         <div className="space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-widest font-bold">
+          <span className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <TrendingUp className="w-3.5 h-3.5 text-brand-blue" /> Cross-Sector Meta Analysis
           </span>
-          <h3 className="text-2xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-2xl font-sans font-semibold uppercase text-text-primary tracking-tight">
             Cross-Industry Insights
           </h3>
-          <p className="text-sm text-text-secondary font-sans font-light max-w-4xl leading-relaxed">
+          <p className="font-sans text-[14px] text-text-secondary max-w-4xl leading-[22px]">
             Although each industry operates differently, several common AI adoption patterns emerged during the research.
             By auditing multiple sectors, we identified overarching structural constraints, technology integration bottlenecks, and standard operational workflows that define high-yield AI adoption paths.
           </p>
@@ -909,9 +908,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
           {/* Common Challenges */}
           <div className="bg-bg-secondary border border-slate-200 p-6 md:p-8 rounded-3xl space-y-6">
             <div className="space-y-1">
-              <span className="block font-mono text-[9px] text-brand-red uppercase font-bold tracking-widest">// RECURRING STRUCTURAL BOTTLENECK PATTERNS</span>
-              <h4 className="text-base font-sans font-bold uppercase text-text-primary tracking-tight">Common Business Challenges</h4>
-              <p className="text-[11px] text-text-secondary font-light font-sans">Recurring operational issues found across multiple capital-intensive industries.</p>
+              <span className="block font-secondary text-xs text-brand-red uppercase font-medium tracking-[0.05em]">// RECURRING STRUCTURAL BOTTLENECK PATTERNS</span>
+              <h4 className="text-[16px] font-sans font-semibold uppercase text-text-primary tracking-tight">Common Business Challenges</h4>
+              <p className="font-sans text-xs text-text-secondary">Recurring operational issues found across multiple capital-intensive industries.</p>
             </div>
 
             <div className="space-y-4">
@@ -923,8 +922,8 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-3 items-start border-l-2 border-brand-red/20 pl-4">
                   <div className="space-y-1">
-                    <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">{item.title}</h5>
-                    <p className="text-[11px] text-text-secondary leading-relaxed font-light font-sans">{item.desc}</p>
+                    <h5 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">{item.title}</h5>
+                    <p className="font-sans text-xs text-text-secondary leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -934,9 +933,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
           {/* Common AI Opportunity Analysis */}
           <div className="bg-bg-secondary border border-slate-200 p-6 md:p-8 rounded-3xl space-y-6">
             <div className="space-y-1">
-              <span className="block font-mono text-[9px] text-brand-green uppercase font-bold tracking-widest">// DESIGNED TECHNOLOGY INTERVENTIONS</span>
-              <h4 className="text-base font-sans font-bold uppercase text-text-primary tracking-tight">Common AI Opportunity Analysis</h4>
-              <p className="text-[11px] text-text-secondary font-light font-sans">Systematic technical patterns capable of resolving workflow bottlenecks.</p>
+              <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// DESIGNED TECHNOLOGY INTERVENTIONS</span>
+              <h4 className="text-[16px] font-sans font-semibold uppercase text-text-primary tracking-tight">Common AI Opportunity Analysis</h4>
+              <p className="font-sans text-xs text-text-secondary">Systematic technical patterns capable of resolving workflow bottlenecks.</p>
             </div>
 
             <div className="space-y-4">
@@ -948,8 +947,8 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-3 items-start border-l-2 border-brand-green/20 pl-4">
                   <div className="space-y-1">
-                    <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">{item.title}</h5>
-                    <p className="text-[11px] text-text-secondary leading-relaxed font-light font-sans">{item.desc}</p>
+                    <h5 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">{item.title}</h5>
+                    <p className="font-sans text-xs text-text-secondary leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -961,9 +960,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* SECTION 4 - AI OPPORTUNITY MATRIX */}
       <section className="space-y-6">
         <div className="space-y-1">
-          <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// QUALITATIVE SECTOR BENCHMARKS</span>
-          <h3 className="text-2xl font-sans font-black text-text-primary uppercase tracking-tight">AI Opportunity Matrix</h3>
-          <p className="text-xs text-text-secondary font-sans font-light">
+          <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// QUALITATIVE SECTOR BENCHMARKS</span>
+          <h3 className="text-2xl font-sans font-semibold text-text-primary uppercase tracking-tight">AI Opportunity Matrix</h3>
+          <p className="font-sans text-xs text-text-secondary">
             A comparative lookup of primary challenges, intervention scopes, and implementation complexity metrics mapped across all audited domains.
           </p>
         </div>
@@ -973,7 +972,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse min-w-[700px]">
               <thead>
-                <tr className="bg-bg-secondary border-b border-slate-200 font-mono text-[9px] uppercase text-text-secondary font-bold tracking-widest">
+                <tr className="bg-bg-secondary border-b border-slate-200 font-secondary text-xs uppercase text-text-secondary font-semibold tracking-[0.05em]">
                   <th className="py-4 px-6">Industry</th>
                   <th className="py-4 px-4">Primary Challenge</th>
                   <th className="py-4 px-4">AI Opportunity Analysis</th>
@@ -981,7 +980,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   <th className="py-4 px-6 text-center">Implementation Complexity</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-100 text-xs text-text-secondary font-light">
+              <tbody className="divide-y divide-slate-100 text-xs text-text-secondary">
                 {[
                   { ind: 'Gems & Jewellery', challenge: 'Synthetic origin detection', opp: 'Spectrometric computer vision', value: 'Very High', comp: 'High' },
                   { ind: 'Edible Oils & Solvents', challenge: 'Free fatty acid thermal lag', opp: 'Predictive distillation kinetics', value: 'High', comp: 'Medium' },
@@ -993,22 +992,22 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   { ind: 'Agro-chemicals & Fertilizers', challenge: 'Exothermic hotspot control', opp: 'Chemical reactor feed kinetics', value: 'High', comp: 'Medium' }
                 ].map((row, idx) => (
                   <tr key={idx} className="hover:bg-slate-50 transition-colors">
-                    <td className="py-4 px-6 font-sans font-bold text-text-primary uppercase tracking-tight">{row.ind}</td>
-                    <td className="py-4 px-4 font-sans text-xs">{row.challenge}</td>
+                    <td className="py-4 px-6 font-sans font-semibold text-text-primary uppercase tracking-tight text-[13px]">{row.ind}</td>
+                    <td className="py-4 px-4 font-sans text-xs text-text-secondary">{row.challenge}</td>
                     <td className="py-4 px-4">
-                      <span className="font-mono text-[10px] text-brand-blue bg-blue-50/50 border border-blue-100 px-2 py-0.5 rounded">
+                      <span className="font-secondary text-[11px] font-medium uppercase text-brand-blue bg-blue-50/50 border border-blue-100 px-2 py-0.5 rounded tracking-wider">
                         {row.opp}
                       </span>
                     </td>
-                    <td className="py-4 px-4 font-mono">
-                      <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider ${
+                    <td className="py-4 px-4">
+                      <span className={`px-2 py-0.5 rounded text-[10px] font-secondary font-semibold uppercase tracking-wider ${
                         row.value === 'Very High' ? 'bg-emerald-50 text-brand-green border border-emerald-100' : 'bg-blue-50 text-brand-blue border border-blue-100'
                       }`}>
                         {row.value}
                       </span>
                     </td>
                     <td className="py-4 px-6 text-center">
-                      <span className={`px-2 py-0.5 rounded text-[9px] font-bold uppercase tracking-wider font-mono ${
+                      <span className={`px-2 py-0.5 rounded text-[10px] font-secondary font-semibold uppercase tracking-wider ${
                         row.comp === 'High' ? 'bg-red-50 text-brand-red border border-red-100' : 'bg-amber-50 text-brand-yellow border border-amber-100'
                       }`}>
                         {row.comp}
@@ -1025,9 +1024,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
       {/* SECTION 5 - INDUSTRY COMPARISON */}
       <section className="space-y-6">
         <div className="space-y-1">
-          <span className="block font-mono text-[9px] text-brand-green uppercase font-bold tracking-widest">// INTERACTIVE BENCHMARKING GRID</span>
-          <h3 className="text-2xl font-sans font-black text-text-primary uppercase tracking-tight">Side-by-Side Sector Comparison</h3>
-          <p className="text-xs text-text-secondary font-sans font-light">
+          <span className="block font-secondary text-xs text-brand-green uppercase font-medium tracking-[0.05em]">// INTERACTIVE BENCHMARKING GRID</span>
+          <h3 className="text-2xl font-sans font-semibold text-text-primary uppercase tracking-tight">Side-by-Side Sector Comparison</h3>
+          <p className="font-sans text-xs text-text-secondary">
             Compare two distinct industrial ecosystems side by side to evaluate operational priorities and technical profiles.
           </p>
         </div>
@@ -1042,13 +1041,13 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
         
         {/* SECTION 1 — TITLE */}
         <div className="space-y-2">
-          <span className="inline-flex items-center gap-1.5 text-brand-blue font-mono text-[9px] uppercase tracking-widest font-bold">
+          <span className="inline-flex items-center gap-1.5 text-brand-blue font-secondary text-xs font-medium uppercase tracking-[0.05em]">
             <Zap className="w-3.5 h-3.5 text-brand-blue" /> CORE REFLECTIONS
           </span>
-          <h3 className="text-2xl font-sans font-black uppercase text-text-primary tracking-tight">
+          <h3 className="text-2xl font-sans font-semibold uppercase text-text-primary tracking-tight">
             Key Learnings
           </h3>
-          <p className="text-sm text-text-secondary font-sans font-light max-w-4xl leading-relaxed">
+          <p className="font-sans text-[14px] text-text-secondary max-w-4xl leading-[22px]">
             How this research experience influenced the way I approach AI, software development, and problem solving.
           </p>
         </div>
@@ -1109,11 +1108,11 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
                   <span className={`p-1.5 rounded-lg bg-slate-50 border border-slate-150 shrink-0 ${item.textColor}`}>
                     <IconComponent className="w-4 h-4" />
                   </span>
-                  <h4 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">
+                  <h4 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">
                     {item.title}
                   </h4>
                 </div>
-                <p className="text-[11px] text-text-secondary leading-relaxed font-sans font-light">
+                <p className="font-sans text-xs text-text-secondary leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -1124,9 +1123,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
         {/* SECTION 3 — HOW THIS CHANGED MY APPROACH */}
         <div className="bg-bg-secondary border border-slate-200 p-6 md:p-8 rounded-3xl space-y-6 shadow-xs">
           <div className="space-y-1">
-            <span className="block font-mono text-[9px] text-brand-blue uppercase font-bold tracking-widest">// ARCHITECTURAL MINDSET SHIFT</span>
-            <h4 className="text-base font-sans font-bold uppercase text-text-primary tracking-tight">How This Changed My Approach</h4>
-            <p className="text-xs text-text-secondary font-sans font-light">
+            <span className="block font-secondary text-xs text-brand-blue uppercase font-medium tracking-[0.05em]">// ARCHITECTURAL MINDSET SHIFT</span>
+            <h4 className="text-[16px] font-sans font-semibold uppercase text-text-primary tracking-tight">How This Changed My Approach</h4>
+            <p className="font-sans text-xs text-text-secondary">
               My AMA research internship fundamentally shifted how I conceptualize, design, and build software systems.
             </p>
           </div>
@@ -1155,9 +1154,9 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
               }
             ].map((node, nIdx) => (
               <div key={nIdx} className="space-y-1.5">
-                <span className="text-[9px] font-mono font-bold text-brand-blue uppercase tracking-wider block">Stage {node.step}</span>
-                <h5 className="font-sans font-bold text-xs text-text-primary uppercase tracking-tight">{node.label}</h5>
-                <p className="text-[11px] text-text-secondary leading-relaxed font-light font-sans">{node.desc}</p>
+                <span className="text-[10px] font-secondary font-semibold text-brand-blue uppercase tracking-[0.05em] block">Stage {node.step}</span>
+                <h5 className="font-sans font-semibold text-xs text-text-primary uppercase tracking-tight">{node.label}</h5>
+                <p className="font-sans text-xs text-text-secondary leading-relaxed">{node.desc}</p>
               </div>
             ))}
           </div>
@@ -1167,10 +1166,10 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
         <div className="bg-white border border-slate-200 p-6 md:p-8 rounded-3xl relative overflow-hidden flex flex-col md:flex-row justify-between items-center gap-6 shadow-xs border-l-4 border-l-brand-blue">
           <div className="absolute top-0 right-0 w-44 h-44 bg-brand-blue/5 rounded-full blur-[60px] pointer-events-none" />
           <div className="space-y-1.5 text-center md:text-left max-w-2xl">
-            <h4 className="font-sans font-black text-sm uppercase text-text-primary tracking-tight">
+            <h4 className="font-sans font-semibold text-[16px] uppercase text-text-primary tracking-tight">
               Bridging Research with Execution →
             </h4>
-            <p className="text-[11px] font-sans text-text-secondary font-light leading-relaxed">
+            <p className="font-sans text-xs text-text-secondary leading-relaxed">
               These industry lessons learned at AMA directly dictate my engineering decisions. Explore my software projects to see how rigorous pre-development analysis is translated into practical, production-ready full-stack applications.
             </p>
           </div>
@@ -1183,7 +1182,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
               }
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="px-5 py-2.5 bg-brand-blue hover:bg-blue-600 text-white font-mono text-[10px] font-bold uppercase tracking-widest rounded-xl transition-all duration-200 shadow-xs whitespace-nowrap cursor-pointer flex items-center gap-1.5"
+            className="px-5 py-2.5 bg-brand-blue hover:bg-blue-600 text-white font-secondary text-[11px] font-semibold uppercase tracking-[0.05em] rounded-xl transition-all duration-200 shadow-xs whitespace-nowrap cursor-pointer flex items-center gap-1.5"
           >
             <span>Explore My Projects</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -1192,7 +1191,7 @@ export default function ResearchView({ onNavigate }: { onNavigate?: (viewId: str
 
         {/* SECTION 5 — FINAL MESSAGE */}
         <div className="pt-4 text-center">
-          <p className="text-xs font-sans font-light text-text-secondary leading-relaxed max-w-3xl mx-auto italic">
+          <p className="font-sans text-xs text-text-secondary leading-relaxed max-w-3xl mx-auto italic">
             "This research journey solidified my core philosophy: robust technology does not exist in a vacuum; it succeeds only when built on a precise understanding of human workflows, physical processes, and real-world operational constraints."
           </p>
         </div>
@@ -1221,7 +1220,7 @@ function CompareSelector({ cases }: { cases: IndustryCase[] }) {
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center bg-bg-secondary p-4 rounded-2xl border border-slate-200">
         <div className="flex items-center gap-2 w-full sm:w-auto">
-          <span className="text-[10px] font-mono uppercase text-text-secondary font-bold shrink-0">Compare Sector A:</span>
+          <span className="text-[11px] font-secondary uppercase text-text-secondary font-semibold shrink-0 tracking-[0.05em]">Compare Sector A:</span>
           <select 
             value={indexA} 
             onChange={(e) => setIndexA(Number(e.target.value))}
@@ -1233,10 +1232,10 @@ function CompareSelector({ cases }: { cases: IndustryCase[] }) {
           </select>
         </div>
 
-        <span className="text-[10px] font-mono text-text-secondary uppercase font-bold hidden sm:block">vs</span>
+        <span className="text-[11px] font-secondary text-text-secondary uppercase font-semibold hidden sm:block tracking-[0.05em]">vs</span>
 
         <div className="flex items-center gap-2 w-full sm:w-auto">
-          <span className="text-[10px] font-mono uppercase text-text-secondary font-bold shrink-0">Compare Sector B:</span>
+          <span className="text-[11px] font-secondary uppercase text-text-secondary font-semibold shrink-0 tracking-[0.05em]">Compare Sector B:</span>
           <select 
             value={indexB} 
             onChange={(e) => setIndexB(Number(e.target.value))}
@@ -1254,39 +1253,39 @@ function CompareSelector({ cases }: { cases: IndustryCase[] }) {
         <div className="bg-white border border-slate-200 rounded-3xl p-6 space-y-4 shadow-xs">
           <div className="flex justify-between items-start border-b border-slate-100 pb-3">
             <div>
-              <span className="text-[8px] font-mono text-brand-blue uppercase font-bold block">Sector A</span>
-              <h4 className="text-sm font-sans font-black uppercase text-text-primary tracking-tight">{caseA.sector}</h4>
+              <span className="text-[10px] font-secondary text-brand-blue uppercase font-semibold block tracking-[0.05em]">Sector A</span>
+              <h4 className="text-[15px] font-sans font-semibold uppercase text-text-primary tracking-tight">{caseA.sector}</h4>
             </div>
-            <span className="px-1.5 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+            <span className="px-1.5 py-0.5 bg-brand-blue/10 border border-brand-blue/20 text-brand-blue text-[10px] font-secondary rounded font-bold uppercase tracking-[0.05em]">
               {caseA.complexityIndex} Complexity
             </span>
           </div>
 
           <div className="space-y-3 text-xs">
             <div>
-              <span className="text-[9px] font-mono text-text-secondary uppercase block">Primary AI Use Cases</span>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block tracking-[0.05em] font-medium">Primary AI Use Cases</span>
               <p className="text-text-primary font-sans font-medium">{caseA.subtopic}</p>
             </div>
 
             <div>
-              <span className="text-[9px] font-mono text-text-secondary uppercase block">Operational Priorities</span>
-              <p className="text-text-primary font-sans font-light leading-relaxed">{caseA.researchFocus}</p>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block tracking-[0.05em] font-medium">Operational Priorities</span>
+              <p className="text-text-primary font-sans leading-relaxed text-xs">{caseA.researchFocus}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
               <div>
-                <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Business Complexity</span>
-                <span className="font-sans font-bold text-text-primary">{caseA.complexityIndex}</span>
+                <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Business Complexity</span>
+                <span className="font-sans font-semibold text-text-primary text-xs">{caseA.complexityIndex}</span>
               </div>
               <div>
-                <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Technology Readiness</span>
-                <span className="font-sans font-bold text-brand-blue">{getTechReadiness(caseA.sector)}</span>
+                <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Technology Readiness</span>
+                <span className="font-sans font-semibold text-brand-blue text-xs">{getTechReadiness(caseA.sector)}</span>
               </div>
             </div>
 
             <div className="pt-2 border-t border-slate-100">
-              <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Primary Challenge</span>
-              <p className="text-text-secondary font-sans font-light italic">"{caseA.challenge}"</p>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Primary Challenge</span>
+              <p className="text-text-secondary font-sans italic text-xs">"{caseA.challenge}"</p>
             </div>
           </div>
         </div>
@@ -1295,39 +1294,39 @@ function CompareSelector({ cases }: { cases: IndustryCase[] }) {
         <div className="bg-white border border-slate-200 rounded-3xl p-6 space-y-4 shadow-xs">
           <div className="flex justify-between items-start border-b border-slate-100 pb-3">
             <div>
-              <span className="text-[8px] font-mono text-brand-green uppercase font-bold block">Sector B</span>
-              <h4 className="text-sm font-sans font-black uppercase text-text-primary tracking-tight">{caseB.sector}</h4>
+              <span className="text-[10px] font-secondary text-brand-green uppercase font-semibold block tracking-[0.05em]">Sector B</span>
+              <h4 className="text-[15px] font-sans font-semibold uppercase text-text-primary tracking-tight">{caseB.sector}</h4>
             </div>
-            <span className="px-1.5 py-0.5 bg-brand-green/10 border border-brand-green/20 text-brand-green text-[8px] font-mono rounded font-bold uppercase tracking-wider">
+            <span className="px-1.5 py-0.5 bg-brand-green/10 border border-brand-green/20 text-brand-green text-[10px] font-secondary rounded font-bold uppercase tracking-[0.05em]">
               {caseB.complexityIndex} Complexity
             </span>
           </div>
 
           <div className="space-y-3 text-xs">
             <div>
-              <span className="text-[9px] font-mono text-text-secondary uppercase block">Primary AI Use Cases</span>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block tracking-[0.05em] font-medium">Primary AI Use Cases</span>
               <p className="text-text-primary font-sans font-medium">{caseB.subtopic}</p>
             </div>
 
             <div>
-              <span className="text-[9px] font-mono text-text-secondary uppercase block">Operational Priorities</span>
-              <p className="text-text-primary font-sans font-light leading-relaxed">{caseB.researchFocus}</p>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block tracking-[0.05em] font-medium">Operational Priorities</span>
+              <p className="text-text-primary font-sans leading-relaxed text-xs">{caseB.researchFocus}</p>
             </div>
 
             <div className="grid grid-cols-2 gap-4 pt-2 border-t border-slate-100">
               <div>
-                <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Business Complexity</span>
-                <span className="font-sans font-bold text-text-primary">{caseB.complexityIndex}</span>
+                <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Business Complexity</span>
+                <span className="font-sans font-semibold text-text-primary text-xs">{caseB.complexityIndex}</span>
               </div>
               <div>
-                <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Technology Readiness</span>
-                <span className="font-sans font-bold text-brand-green">{getTechReadiness(caseB.sector)}</span>
+                <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Technology Readiness</span>
+                <span className="font-sans font-semibold text-brand-green text-xs">{getTechReadiness(caseB.sector)}</span>
               </div>
             </div>
 
             <div className="pt-2 border-t border-slate-100">
-              <span className="text-[9px] font-mono text-text-secondary uppercase block font-semibold">Primary Challenge</span>
-              <p className="text-text-secondary font-sans font-light italic">"{caseB.challenge}"</p>
+              <span className="text-[10px] font-secondary text-text-secondary uppercase block font-semibold tracking-[0.05em]">Primary Challenge</span>
+              <p className="text-text-secondary font-sans italic text-xs">"{caseB.challenge}"</p>
             </div>
           </div>
         </div>

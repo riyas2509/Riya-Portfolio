@@ -1,21 +1,20 @@
-# Riya Shah's Personal Portfolio
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-This repository contains the source code for my personal portfolio website.
+# Run and deploy your AI Studio app
 
-The portfolio showcases my projects, technical skills, research, experience, achievements, and provides a way to connect with me professionally.
+This contains everything you need to run your app locally.
 
-## Tech Stack
+View your app in AI Studio: https://ai.studio/apps/4c62924a-3eee-4c9e-acd3-9999b10d17f4
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Motion
-- EmailJS
-- Firebase Hosting
+## Run Locally
 
-## Connect with Me
+**Prerequisites:**  Node.js
 
-- LinkedIn: https://www.linkedin.com/in/riya-shah-335056290/
-- GitHub: https://github.com/riyas2509
-- EchoTech: https://echotechai.in
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
