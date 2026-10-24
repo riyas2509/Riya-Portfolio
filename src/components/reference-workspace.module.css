@@ -1,0 +1,62 @@
+/* Scoped to the right-side hero artwork. No shared layout or typography rules. */
+.room.room::after {
+  display: none;
+}
+.illustration {
+  position: absolute;
+  inset: 0 0 18px;
+  z-index: 1;
+}
+.art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 30px;
+}
+.spark {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff4ce;
+  filter: blur(7px);
+  pointer-events: none;
+  opacity: 0.2;
+  animation: soften 6s ease-in-out infinite;
+}
+.sparkOne {
+  left: 19%;
+  top: 40%;
+}
+.sparkTwo {
+  left: 69%;
+  top: 41%;
+  animation-delay: -3s;
+}
+.spark[data-reduced="true"] {
+  animation: none;
+}
+@keyframes soften {
+  0%,
+  100% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spark {
+    animation: none;
+  }
+}
+@media (max-width: 650px) {
+  .room.room {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 4 / 3;
+  }
+  .art {
+    border-radius: 24px;
+  }
+}

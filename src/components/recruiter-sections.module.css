@@ -1,0 +1,346 @@
+.journey,
+.qa {
+  padding-block: 30px 65px;
+  scroll-margin-top: 35px;
+}
+.journey h2,
+.qa h2 {
+  font-size: clamp(29px, 3.5vw, 43px) !important;
+}
+.steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  position: relative;
+  margin: 34px 0 28px;
+  padding: 0;
+}
+.steps:before {
+  content: "";
+  position: absolute;
+  top: 51px;
+  left: 25px;
+  right: 25px;
+  border-top: 2px dashed #c5afd4;
+}
+.step {
+  position: relative;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 21px;
+  border: 1px solid #fff;
+  border-radius: 27px;
+  background: #eee4f5;
+  box-shadow: 0 10px 24px #79558b0c;
+  transition: box-shadow 0.2s ease;
+}
+.step:nth-child(2) {
+  background: #e5f0e8;
+}
+.step:nth-child(3) {
+  background: #fbe5d8;
+}
+.step:nth-child(4) {
+  background: #e8f0f8;
+}
+.step:hover {
+  box-shadow: 0 14px 28px #79558b1a;
+}
+.stepTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+.number {
+  font-size: 12px;
+  letter-spacing: 1.4px;
+  color: #715184;
+}
+.toyIcon {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 17px;
+  background: #fff9f2;
+  box-shadow:
+    inset 0 2px 2px #fff,
+    0 4px 0 #79558b12;
+  color: #815c94;
+  transform: rotate(-5deg);
+  transition: transform 0.2s ease;
+}
+.step:hover .toyIcon {
+  transform: rotate(0) translateY(-2px);
+}
+.step h3,
+.team h3 {
+  font-size: 19px;
+  line-height: 1.35;
+  font-weight: 500;
+  color: #67467c;
+  margin: 0 0 12px;
+}
+.step p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #62506c;
+  margin: 0 0 23px;
+}
+.step a {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #67467c;
+  margin-top: auto;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  min-height: 38px;
+}
+.step a svg {
+  flex-shrink: 0;
+}
+.team {
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  align-items: center;
+  gap: 35px;
+  padding: 26px 30px;
+  border: 1px solid #e7d7e4;
+  border-radius: 26px;
+  background: #fffaf8;
+}
+.team p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #62506c;
+  max-width: 290px;
+}
+.team ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.team li {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  color: #67467c;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.team li svg {
+  flex-shrink: 0;
+}
+.qa {
+  max-width: 1000px;
+}
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 32px;
+}
+.question {
+  background: #f3eaf7;
+  border: 1px solid #e7d7e4;
+  border-radius: 21px;
+  overflow: hidden;
+}
+.question:nth-child(even) {
+  background: #fffaf8;
+}
+.question h3 {
+  margin: 0;
+}
+.question button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+  width: 100%;
+  min-height: 72px;
+  padding: 21px 25px;
+  background: transparent;
+  border: 0;
+  color: #67467c;
+  font:
+    500 16px/1.5 "Trebuchet MS",
+    sans-serif;
+  cursor: pointer;
+}
+.question button svg {
+  flex-shrink: 0;
+}
+.question button:hover {
+  background: #eadcf144;
+}
+.question button:focus-visible {
+  outline: 3px solid #815c94;
+  outline-offset: -5px;
+  border-radius: 20px;
+}
+.answer {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.24s ease;
+}
+.answerOpen {
+  grid-template-rows: 1fr;
+}
+.answer > div {
+  min-height: 0;
+  overflow: hidden;
+}
+.answerContent {
+  padding: 0 25px 23px;
+  max-width: 800px;
+}
+.answer p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #62506c;
+  margin: 0;
+}
+.answer a,
+.qaFootnote a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #67467c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  line-height: 1.6;
+  min-height: 35px;
+}
+.answer a {
+  margin-top: 10px;
+  font-size: 13px;
+}
+.qaFootnote {
+  margin-top: 25px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #62506c;
+}
+.jump {
+  display: flex;
+  justify-content: flex-end;
+  padding-block: 0 15px;
+}
+.jump a {
+  font-size: 12px;
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #67467c;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 950px) {
+  .steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .steps:before {
+    top: 20px;
+    bottom: 20px;
+    left: 50%;
+    right: auto;
+    border-top: 0;
+    border-left: 2px dashed #c5afd4;
+  }
+  .team {
+    grid-template-columns: 1fr 1.25fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 650px) {
+  .journey,
+  .qa {
+    padding-block: 25px 45px;
+  }
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 25px;
+    padding-left: 18px;
+  }
+  .steps:before {
+    left: 4px;
+  }
+  .step:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 46px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid #fff9f2;
+    background: #b99cdd;
+  }
+  .step {
+    padding: 23px;
+  }
+  .stepTop {
+    margin-bottom: 12px;
+  }
+  .step a {
+    font-size: 12px;
+  }
+  .team {
+    grid-template-columns: 1fr;
+    padding: 23px;
+    gap: 18px;
+  }
+  .team p {
+    max-width: none;
+  }
+  .question button {
+    font-size: 15px;
+    padding: 19px;
+    min-height: 72px;
+    gap: 12px;
+  }
+  .answerContent {
+    padding: 0 19px 20px;
+  }
+  .answer p {
+    font-size: 14px;
+  }
+  .qaFootnote a {
+    display: flex;
+  }
+  .jump {
+    justify-content: flex-start;
+    padding-top: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .step,
+  .toyIcon,
+  .answer {
+    transition: none;
+  }
+  .step:hover .toyIcon {
+    transform: rotate(-5deg);
+  }
+}
+:global([data-reduced-motion="true"]) .step,
+:global([data-reduced-motion="true"]) .toyIcon,
+:global([data-reduced-motion="true"]) .answer {
+  transition: none;
+}
+:global([data-reduced-motion="true"]) .step:hover .toyIcon {
+  transform: rotate(-5deg);
+}
